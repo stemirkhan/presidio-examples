@@ -1,0 +1,10 @@
+{
+  "intentional_filter_failure": true,
+  "exception_observed": true,
+  "gateway_requests_during_failure": 0,
+  "provider_calls": 0,
+  "error": {
+    "type": "HookAborted",
+    "message": "Presidio processing failed; external model call stopped"
+  }
+}

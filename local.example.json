@@ -1,0 +1,7 @@
+{
+  "model_paths": {
+    "fastino": "models/fastino",
+    "metrika": "models/metrika"
+  },
+  "budget_file": "api-budget.json"
+}

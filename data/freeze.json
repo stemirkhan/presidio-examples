@@ -1,0 +1,13 @@
+{
+  "frozen_before_inference": true,
+  "files": {
+    "comparison.json": "ab7772189ccf4c17794ad828152e1379ead8d15a652ff7eb3e6159fa5b362139",
+    "fix-checks.json": "3eb09f8c982e4545fb43f6638018cde3a858138a9e42d6ec10f45b35b7391bc4",
+    "models.json": "408a4d08f3e150af919626caf8b7b3a84e38d8db7dd8bb65872b3fae64914174",
+    "tracker.json": "7024335a9d5d89abb2fa99b831542af6c2236a9b9e37718c3a91f490946c9987",
+    "tracker-gold.json": "7c4bf6e94a796498e54df9c7eddce15d2fa80ec67f0833a2cafafd85114ab3b7"
+  },
+  "comparison_cases": 20,
+  "gold_mentions": 25,
+  "negative_cases": 4
+}

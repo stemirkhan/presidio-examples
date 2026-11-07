@@ -1,0 +1,14 @@
+.venv*
+.idea/
+__pycache__/
+*.pyc
+runs/
+cache/
+models/
+local.json
+latest*.txt
+*.log
+.env*
+api-budget*.json
+*.lock.local
+api-budget.lock

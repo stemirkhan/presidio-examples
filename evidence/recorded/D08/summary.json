@@ -1,0 +1,8 @@
+{
+  "new_tokens": 12,
+  "tokens_fully_covered": 12,
+  "negatives": 6,
+  "negative_jwt_matches": 0,
+  "negative_any_redaction": 0,
+  "training_performed": false
+}

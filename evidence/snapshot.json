@@ -1,0 +1,1451 @@
+{
+  "checked_on": "2026-11-06",
+  "comparison": {
+    "baseline": {
+      "fully_covered": 18,
+      "gold_mentions": 25,
+      "extra_characters": 5,
+      "negative_with_findings": 0,
+      "negative_cases": 4
+    },
+    "fastino": {
+      "fully_covered": 19,
+      "gold_mentions": 25,
+      "extra_characters": 0,
+      "negative_with_findings": 0,
+      "negative_cases": 4
+    },
+    "metrika": {
+      "fully_covered": 25,
+      "gold_mentions": 25,
+      "extra_characters": 0,
+      "negative_with_findings": 0,
+      "negative_cases": 4
+    }
+  },
+  "comparison_dataset_sha256": "ab7772189ccf4c17794ad828152e1379ead8d15a652ff7eb3e6159fa5b362139",
+  "comparison_rows": [
+    {
+      "id": "case-01",
+      "title": "Имя и почта",
+      "config": "baseline",
+      "text": "Клиент Марина Соколова просит ответить на marina.sokolova@example.com.",
+      "masked": "Клиент <PERSON> просит ответить на <EMAIL_ADDRESS>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Марина Соколова",
+            "fully_covered": true,
+            "covered_characters": 14,
+            "characters": 14
+          },
+          {
+            "text": "marina.sokolova@example.com",
+            "fully_covered": true,
+            "covered_characters": 27,
+            "characters": 27
+          }
+        ],
+        "fully_covered": 2,
+        "gold_mentions": 2,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-02",
+      "title": "Имя в падеже",
+      "config": "baseline",
+      "text": "Передайте договор Андрею Кузнецову после согласования.",
+      "masked": "Передайте договор <PERSON> после согласования.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Андрею Кузнецову",
+            "fully_covered": true,
+            "covered_characters": 15,
+            "characters": 15
+          }
+        ],
+        "fully_covered": 1,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-03",
+      "title": "Двойная фамилия",
+      "config": "baseline",
+      "text": "Заявку оформила Елена Орлова-Соколова.",
+      "masked": "Заявку оформила <PERSON>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Елена Орлова-Соколова",
+            "fully_covered": true,
+            "covered_characters": 20,
+            "characters": 20
+          }
+        ],
+        "fully_covered": 1,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-04",
+      "title": "Два участника",
+      "config": "baseline",
+      "text": "Олег Миронов передал обращение Татьяне Волковой.",
+      "masked": "<PERSON> передал обращение <PERSON>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Олег Миронов",
+            "fully_covered": true,
+            "covered_characters": 11,
+            "characters": 11
+          },
+          {
+            "text": "Татьяне Волковой",
+            "fully_covered": true,
+            "covered_characters": 15,
+            "characters": 15
+          }
+        ],
+        "fully_covered": 2,
+        "gold_mentions": 2,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-05",
+      "title": "Почта с alias",
+      "config": "baseline",
+      "text": "Ответ отправьте на qa.person+case17@example.org и copy.person@example.net.",
+      "masked": "Ответ отправьте на <EMAIL_ADDRESS> и <EMAIL_ADDRESS>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "qa.person+case17@example.org",
+            "fully_covered": true,
+            "covered_characters": 28,
+            "characters": 28
+          },
+          {
+            "text": "copy.person@example.net",
+            "fully_covered": true,
+            "covered_characters": 23,
+            "characters": 23
+          }
+        ],
+        "fully_covered": 2,
+        "gold_mentions": 2,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-06",
+      "title": "Телефон с форматированием",
+      "config": "baseline",
+      "text": "Телефон клиента: +7 (916) 555-01-42.",
+      "masked": "Телефон клиента: <PHONE_NUMBER>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "+7 (916) 555-01-42",
+            "fully_covered": true,
+            "covered_characters": 16,
+            "characters": 16
+          }
+        ],
+        "fully_covered": 1,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-07",
+      "title": "Телефон в нескольких строках",
+      "config": "baseline",
+      "text": "Контакт для связи:\n+7 921 555 03 18\nПозвонить после согласования.",
+      "masked": "Контакт для связи:\n<PHONE_NUMBER>\nПозвонить после согласования.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "+7 921 555 03 18",
+            "fully_covered": true,
+            "covered_characters": 12,
+            "characters": 12
+          }
+        ],
+        "fully_covered": 1,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-08",
+      "title": "Полный адрес",
+      "config": "baseline",
+      "text": "Адрес доставки: г. Тверь, ул. Лесная, д. 14, кв. 23.",
+      "masked": "Адрес доставки: г. <LOCATION>, ул. <LOCATION>, д. 14, кв. 23.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "г. Тверь, ул. Лесная, д. 14, кв. 23",
+            "fully_covered": false,
+            "covered_characters": 11,
+            "characters": 28
+          }
+        ],
+        "fully_covered": 0,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-09",
+      "title": "Адрес без индекса",
+      "config": "baseline",
+      "text": "Клиент живет по адресу: Казань, улица Полевая, дом 8, квартира 17.",
+      "masked": "Клиент живет по адресу: <LOCATION>, улица <LOCATION>, дом 8, квартира 17.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Казань, улица Полевая, дом 8, квартира 17",
+            "fully_covered": false,
+            "covered_characters": 13,
+            "characters": 35
+          }
+        ],
+        "fully_covered": 0,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-10",
+      "title": "Дата рождения",
+      "config": "baseline",
+      "text": "В анкете указана дата рождения: 17.08.1986.",
+      "masked": "В анкете указана дата рождения: <DATE_TIME>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "17.08.1986",
+            "fully_covered": true,
+            "covered_characters": 10,
+            "characters": 10
+          }
+        ],
+        "fully_covered": 1,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-11",
+      "title": "Паспорт",
+      "config": "baseline",
+      "text": "Паспорт клиента: серия 4512, номер 654321.",
+      "masked": "Паспорт клиента: серия 4512, номер 654321.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "4512",
+            "fully_covered": false,
+            "covered_characters": 0,
+            "characters": 4
+          },
+          {
+            "text": "654321",
+            "fully_covered": false,
+            "covered_characters": 0,
+            "characters": 6
+          }
+        ],
+        "fully_covered": 0,
+        "gold_mentions": 2,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-12",
+      "title": "СНИЛС",
+      "config": "baseline",
+      "text": "СНИЛС в учебной анкете: 112-233-445 95.",
+      "masked": "СНИЛС в учебной анкете: 112-233-445 95.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "112-233-445 95",
+            "fully_covered": false,
+            "covered_characters": 0,
+            "characters": 13
+          }
+        ],
+        "fully_covered": 0,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-13",
+      "title": "Логин и IP",
+      "config": "baseline",
+      "text": "Логин клиента @demo_customer_714. IP сессии 192.0.2.48.",
+      "masked": "<PERSON> клиента @demo_customer_714. IP сессии <IP_ADDRESS>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "@demo_customer_714",
+            "fully_covered": false,
+            "covered_characters": 0,
+            "characters": 18
+          },
+          {
+            "text": "192.0.2.48",
+            "fully_covered": true,
+            "covered_characters": 10,
+            "characters": 10
+          }
+        ],
+        "fully_covered": 1,
+        "gold_mentions": 2,
+        "extra_characters": 5,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-14",
+      "title": "Повтор имени",
+      "config": "baseline",
+      "text": "Марина Соколова оставила почту marina.sokolova@example.com. Позже Марина Соколова подтвердила адрес.",
+      "masked": "<PERSON> оставила почту <EMAIL_ADDRESS>. Позже <PERSON> подтвердила адрес.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Марина Соколова",
+            "fully_covered": true,
+            "covered_characters": 14,
+            "characters": 14
+          },
+          {
+            "text": "marina.sokolova@example.com",
+            "fully_covered": true,
+            "covered_characters": 27,
+            "characters": 27
+          },
+          {
+            "text": "Марина Соколова",
+            "fully_covered": true,
+            "covered_characters": 14,
+            "characters": 14
+          }
+        ],
+        "fully_covered": 3,
+        "gold_mentions": 3,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-15",
+      "title": "Имя с отчеством",
+      "config": "baseline",
+      "text": "Контактное лицо: Виктор Сергеевич Лебедев, телефон +7 903 555 07 24.",
+      "masked": "Контактное лицо: <PERSON>, телефон <PHONE_NUMBER>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Виктор Сергеевич Лебедев",
+            "fully_covered": true,
+            "covered_characters": 22,
+            "characters": 22
+          },
+          {
+            "text": "+7 903 555 07 24",
+            "fully_covered": true,
+            "covered_characters": 12,
+            "characters": 12
+          }
+        ],
+        "fully_covered": 2,
+        "gold_mentions": 2,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-16",
+      "title": "Смешанный текст",
+      "config": "baseline",
+      "text": "Customer Anna Petrova просит ответить на anna.petrova@example.com.",
+      "masked": "Customer Anna Petrova просит ответить на <EMAIL_ADDRESS>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Anna Petrova",
+            "fully_covered": false,
+            "covered_characters": 0,
+            "characters": 11
+          },
+          {
+            "text": "anna.petrova@example.com",
+            "fully_covered": true,
+            "covered_characters": 24,
+            "characters": 24
+          }
+        ],
+        "fully_covered": 1,
+        "gold_mentions": 2,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-17",
+      "title": "Без PII: задача",
+      "config": "baseline",
+      "text": "Задача PAY-315 закрыта после проверки. Нужен повторный запуск тестов.",
+      "masked": "Задача PAY-315 закрыта после проверки. Нужен повторный запуск тестов.",
+      "evaluation": {
+        "mentions": [],
+        "fully_covered": 0,
+        "gold_mentions": 0,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-18",
+      "title": "Без PII: суммы",
+      "config": "baseline",
+      "text": "В заказе 20 кресел, бюджет 300000 рублей. Уточните срок поставки.",
+      "masked": "В заказе 20 кресел, бюджет 300000 рублей. Уточните срок поставки.",
+      "evaluation": {
+        "mentions": [],
+        "fully_covered": 0,
+        "gold_mentions": 0,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-19",
+      "title": "Без PII: версия",
+      "config": "baseline",
+      "text": "Сборка build-20261106.4 прошла тесты, HTTP 200. Ошибок в журнале нет.",
+      "masked": "Сборка build-20261106.4 прошла тесты, HTTP 200. Ошибок в журнале нет.",
+      "evaluation": {
+        "mentions": [],
+        "fully_covered": 0,
+        "gold_mentions": 0,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-20",
+      "title": "Без PII: обычный текст",
+      "config": "baseline",
+      "text": "Нужно обновить документацию и проверить инструкцию отката сервиса.",
+      "masked": "Нужно обновить документацию и проверить инструкцию отката сервиса.",
+      "evaluation": {
+        "mentions": [],
+        "fully_covered": 0,
+        "gold_mentions": 0,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-01",
+      "title": "Имя и почта",
+      "config": "fastino",
+      "text": "Клиент Марина Соколова просит ответить на marina.sokolova@example.com.",
+      "masked": "Клиент <PERSON> просит ответить на <EMAIL_ADDRESS>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Марина Соколова",
+            "fully_covered": true,
+            "covered_characters": 14,
+            "characters": 14
+          },
+          {
+            "text": "marina.sokolova@example.com",
+            "fully_covered": true,
+            "covered_characters": 27,
+            "characters": 27
+          }
+        ],
+        "fully_covered": 2,
+        "gold_mentions": 2,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-02",
+      "title": "Имя в падеже",
+      "config": "fastino",
+      "text": "Передайте договор Андрею Кузнецову после согласования.",
+      "masked": "Передайте договор <PERSON> после согласования.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Андрею Кузнецову",
+            "fully_covered": true,
+            "covered_characters": 15,
+            "characters": 15
+          }
+        ],
+        "fully_covered": 1,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-03",
+      "title": "Двойная фамилия",
+      "config": "fastino",
+      "text": "Заявку оформила Елена Орлова-Соколова.",
+      "masked": "Заявку оформила <PERSON>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Елена Орлова-Соколова",
+            "fully_covered": true,
+            "covered_characters": 20,
+            "characters": 20
+          }
+        ],
+        "fully_covered": 1,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-04",
+      "title": "Два участника",
+      "config": "fastino",
+      "text": "Олег Миронов передал обращение Татьяне Волковой.",
+      "masked": "<PERSON> передал обращение <PERSON>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Олег Миронов",
+            "fully_covered": true,
+            "covered_characters": 11,
+            "characters": 11
+          },
+          {
+            "text": "Татьяне Волковой",
+            "fully_covered": true,
+            "covered_characters": 15,
+            "characters": 15
+          }
+        ],
+        "fully_covered": 2,
+        "gold_mentions": 2,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-05",
+      "title": "Почта с alias",
+      "config": "fastino",
+      "text": "Ответ отправьте на qa.person+case17@example.org и copy.person@example.net.",
+      "masked": "Ответ отправьте на <EMAIL_ADDRESS> и <EMAIL_ADDRESS>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "qa.person+case17@example.org",
+            "fully_covered": true,
+            "covered_characters": 28,
+            "characters": 28
+          },
+          {
+            "text": "copy.person@example.net",
+            "fully_covered": true,
+            "covered_characters": 23,
+            "characters": 23
+          }
+        ],
+        "fully_covered": 2,
+        "gold_mentions": 2,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-06",
+      "title": "Телефон с форматированием",
+      "config": "fastino",
+      "text": "Телефон клиента: +7 (916) 555-01-42.",
+      "masked": "Телефон клиента: <PHONE_NUMBER>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "+7 (916) 555-01-42",
+            "fully_covered": true,
+            "covered_characters": 16,
+            "characters": 16
+          }
+        ],
+        "fully_covered": 1,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-07",
+      "title": "Телефон в нескольких строках",
+      "config": "fastino",
+      "text": "Контакт для связи:\n+7 921 555 03 18\nПозвонить после согласования.",
+      "masked": "Контакт для связи:\n<PHONE_NUMBER>\nПозвонить после согласования.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "+7 921 555 03 18",
+            "fully_covered": true,
+            "covered_characters": 12,
+            "characters": 12
+          }
+        ],
+        "fully_covered": 1,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-08",
+      "title": "Полный адрес",
+      "config": "fastino",
+      "text": "Адрес доставки: г. Тверь, ул. Лесная, д. 14, кв. 23.",
+      "masked": "Адрес доставки: <LOCATION>, ул. Лесная, д. 14, кв. 23.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "г. Тверь, ул. Лесная, д. 14, кв. 23",
+            "fully_covered": false,
+            "covered_characters": 7,
+            "characters": 28
+          }
+        ],
+        "fully_covered": 0,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-09",
+      "title": "Адрес без индекса",
+      "config": "fastino",
+      "text": "Клиент живет по адресу: Казань, улица Полевая, дом 8, квартира 17.",
+      "masked": "Клиент живет по адресу: <LOCATION>, улица Полевая, дом 8, <LOCATION>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Казань, улица Полевая, дом 8, квартира 17",
+            "fully_covered": false,
+            "covered_characters": 16,
+            "characters": 35
+          }
+        ],
+        "fully_covered": 0,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-10",
+      "title": "Дата рождения",
+      "config": "fastino",
+      "text": "В анкете указана дата рождения: 17.08.1986.",
+      "masked": "В анкете указана дата рождения: <DATE_TIME>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "17.08.1986",
+            "fully_covered": true,
+            "covered_characters": 10,
+            "characters": 10
+          }
+        ],
+        "fully_covered": 1,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-11",
+      "title": "Паспорт",
+      "config": "fastino",
+      "text": "Паспорт клиента: серия 4512, номер 654321.",
+      "masked": "Паспорт клиента: серия 4512, номер 654321.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "4512",
+            "fully_covered": false,
+            "covered_characters": 0,
+            "characters": 4
+          },
+          {
+            "text": "654321",
+            "fully_covered": false,
+            "covered_characters": 0,
+            "characters": 6
+          }
+        ],
+        "fully_covered": 0,
+        "gold_mentions": 2,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-12",
+      "title": "СНИЛС",
+      "config": "fastino",
+      "text": "СНИЛС в учебной анкете: 112-233-445 95.",
+      "masked": "СНИЛС в учебной анкете: 112-233-445 95.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "112-233-445 95",
+            "fully_covered": false,
+            "covered_characters": 0,
+            "characters": 13
+          }
+        ],
+        "fully_covered": 0,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-13",
+      "title": "Логин и IP",
+      "config": "fastino",
+      "text": "Логин клиента @demo_customer_714. IP сессии 192.0.2.48.",
+      "masked": "Логин клиента @demo_customer_714. IP сессии <IP_ADDRESS>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "@demo_customer_714",
+            "fully_covered": false,
+            "covered_characters": 0,
+            "characters": 18
+          },
+          {
+            "text": "192.0.2.48",
+            "fully_covered": true,
+            "covered_characters": 10,
+            "characters": 10
+          }
+        ],
+        "fully_covered": 1,
+        "gold_mentions": 2,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-14",
+      "title": "Повтор имени",
+      "config": "fastino",
+      "text": "Марина Соколова оставила почту marina.sokolova@example.com. Позже Марина Соколова подтвердила адрес.",
+      "masked": "<PERSON> оставила почту <EMAIL_ADDRESS>. Позже <PERSON> подтвердила адрес.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Марина Соколова",
+            "fully_covered": true,
+            "covered_characters": 14,
+            "characters": 14
+          },
+          {
+            "text": "marina.sokolova@example.com",
+            "fully_covered": true,
+            "covered_characters": 27,
+            "characters": 27
+          },
+          {
+            "text": "Марина Соколова",
+            "fully_covered": true,
+            "covered_characters": 14,
+            "characters": 14
+          }
+        ],
+        "fully_covered": 3,
+        "gold_mentions": 3,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-15",
+      "title": "Имя с отчеством",
+      "config": "fastino",
+      "text": "Контактное лицо: Виктор Сергеевич Лебедев, телефон +7 903 555 07 24.",
+      "masked": "Контактное лицо: <PERSON>, телефон <PHONE_NUMBER>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Виктор Сергеевич Лебедев",
+            "fully_covered": true,
+            "covered_characters": 22,
+            "characters": 22
+          },
+          {
+            "text": "+7 903 555 07 24",
+            "fully_covered": true,
+            "covered_characters": 12,
+            "characters": 12
+          }
+        ],
+        "fully_covered": 2,
+        "gold_mentions": 2,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-16",
+      "title": "Смешанный текст",
+      "config": "fastino",
+      "text": "Customer Anna Petrova просит ответить на anna.petrova@example.com.",
+      "masked": "Customer <PERSON> просит ответить на <EMAIL_ADDRESS>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Anna Petrova",
+            "fully_covered": true,
+            "covered_characters": 11,
+            "characters": 11
+          },
+          {
+            "text": "anna.petrova@example.com",
+            "fully_covered": true,
+            "covered_characters": 24,
+            "characters": 24
+          }
+        ],
+        "fully_covered": 2,
+        "gold_mentions": 2,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-17",
+      "title": "Без PII: задача",
+      "config": "fastino",
+      "text": "Задача PAY-315 закрыта после проверки. Нужен повторный запуск тестов.",
+      "masked": "Задача PAY-315 закрыта после проверки. Нужен повторный запуск тестов.",
+      "evaluation": {
+        "mentions": [],
+        "fully_covered": 0,
+        "gold_mentions": 0,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-18",
+      "title": "Без PII: суммы",
+      "config": "fastino",
+      "text": "В заказе 20 кресел, бюджет 300000 рублей. Уточните срок поставки.",
+      "masked": "В заказе 20 кресел, бюджет 300000 рублей. Уточните срок поставки.",
+      "evaluation": {
+        "mentions": [],
+        "fully_covered": 0,
+        "gold_mentions": 0,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-19",
+      "title": "Без PII: версия",
+      "config": "fastino",
+      "text": "Сборка build-20261106.4 прошла тесты, HTTP 200. Ошибок в журнале нет.",
+      "masked": "Сборка build-20261106.4 прошла тесты, HTTP 200. Ошибок в журнале нет.",
+      "evaluation": {
+        "mentions": [],
+        "fully_covered": 0,
+        "gold_mentions": 0,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-20",
+      "title": "Без PII: обычный текст",
+      "config": "fastino",
+      "text": "Нужно обновить документацию и проверить инструкцию отката сервиса.",
+      "masked": "Нужно обновить документацию и проверить инструкцию отката сервиса.",
+      "evaluation": {
+        "mentions": [],
+        "fully_covered": 0,
+        "gold_mentions": 0,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-01",
+      "title": "Имя и почта",
+      "config": "metrika",
+      "text": "Клиент Марина Соколова просит ответить на marina.sokolova@example.com.",
+      "masked": "Клиент <PERSON> просит ответить на <EMAIL_ADDRESS>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Марина Соколова",
+            "fully_covered": true,
+            "covered_characters": 14,
+            "characters": 14
+          },
+          {
+            "text": "marina.sokolova@example.com",
+            "fully_covered": true,
+            "covered_characters": 27,
+            "characters": 27
+          }
+        ],
+        "fully_covered": 2,
+        "gold_mentions": 2,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-02",
+      "title": "Имя в падеже",
+      "config": "metrika",
+      "text": "Передайте договор Андрею Кузнецову после согласования.",
+      "masked": "Передайте договор <PERSON> после согласования.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Андрею Кузнецову",
+            "fully_covered": true,
+            "covered_characters": 15,
+            "characters": 15
+          }
+        ],
+        "fully_covered": 1,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-03",
+      "title": "Двойная фамилия",
+      "config": "metrika",
+      "text": "Заявку оформила Елена Орлова-Соколова.",
+      "masked": "Заявку оформила <PERSON>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Елена Орлова-Соколова",
+            "fully_covered": true,
+            "covered_characters": 20,
+            "characters": 20
+          }
+        ],
+        "fully_covered": 1,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-04",
+      "title": "Два участника",
+      "config": "metrika",
+      "text": "Олег Миронов передал обращение Татьяне Волковой.",
+      "masked": "<PERSON> передал обращение <PERSON>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Олег Миронов",
+            "fully_covered": true,
+            "covered_characters": 11,
+            "characters": 11
+          },
+          {
+            "text": "Татьяне Волковой",
+            "fully_covered": true,
+            "covered_characters": 15,
+            "characters": 15
+          }
+        ],
+        "fully_covered": 2,
+        "gold_mentions": 2,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-05",
+      "title": "Почта с alias",
+      "config": "metrika",
+      "text": "Ответ отправьте на qa.person+case17@example.org и copy.person@example.net.",
+      "masked": "Ответ отправьте на <EMAIL_ADDRESS> и <EMAIL_ADDRESS>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "qa.person+case17@example.org",
+            "fully_covered": true,
+            "covered_characters": 28,
+            "characters": 28
+          },
+          {
+            "text": "copy.person@example.net",
+            "fully_covered": true,
+            "covered_characters": 23,
+            "characters": 23
+          }
+        ],
+        "fully_covered": 2,
+        "gold_mentions": 2,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-06",
+      "title": "Телефон с форматированием",
+      "config": "metrika",
+      "text": "Телефон клиента: +7 (916) 555-01-42.",
+      "masked": "Телефон клиента: <PHONE_NUMBER>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "+7 (916) 555-01-42",
+            "fully_covered": true,
+            "covered_characters": 16,
+            "characters": 16
+          }
+        ],
+        "fully_covered": 1,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-07",
+      "title": "Телефон в нескольких строках",
+      "config": "metrika",
+      "text": "Контакт для связи:\n+7 921 555 03 18\nПозвонить после согласования.",
+      "masked": "Контакт для связи:\n<PHONE_NUMBER>\nПозвонить после согласования.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "+7 921 555 03 18",
+            "fully_covered": true,
+            "covered_characters": 12,
+            "characters": 12
+          }
+        ],
+        "fully_covered": 1,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-08",
+      "title": "Полный адрес",
+      "config": "metrika",
+      "text": "Адрес доставки: г. Тверь, ул. Лесная, д. 14, кв. 23.",
+      "masked": "Адрес доставки: <LOCATION>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "г. Тверь, ул. Лесная, д. 14, кв. 23",
+            "fully_covered": true,
+            "covered_characters": 28,
+            "characters": 28
+          }
+        ],
+        "fully_covered": 1,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-09",
+      "title": "Адрес без индекса",
+      "config": "metrika",
+      "text": "Клиент живет по адресу: Казань, улица Полевая, дом 8, квартира 17.",
+      "masked": "Клиент живет по адресу: <LOCATION>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Казань, улица Полевая, дом 8, квартира 17",
+            "fully_covered": true,
+            "covered_characters": 35,
+            "characters": 35
+          }
+        ],
+        "fully_covered": 1,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-10",
+      "title": "Дата рождения",
+      "config": "metrika",
+      "text": "В анкете указана дата рождения: 17.08.1986.",
+      "masked": "В анкете указана дата рождения: <DATE_TIME>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "17.08.1986",
+            "fully_covered": true,
+            "covered_characters": 10,
+            "characters": 10
+          }
+        ],
+        "fully_covered": 1,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-11",
+      "title": "Паспорт",
+      "config": "metrika",
+      "text": "Паспорт клиента: серия 4512, номер 654321.",
+      "masked": "Паспорт клиента: серия <RU_PII>, номер <RU_PII>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "4512",
+            "fully_covered": true,
+            "covered_characters": 4,
+            "characters": 4
+          },
+          {
+            "text": "654321",
+            "fully_covered": true,
+            "covered_characters": 6,
+            "characters": 6
+          }
+        ],
+        "fully_covered": 2,
+        "gold_mentions": 2,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-12",
+      "title": "СНИЛС",
+      "config": "metrika",
+      "text": "СНИЛС в учебной анкете: 112-233-445 95.",
+      "masked": "СНИЛС в учебной анкете: <RU_PII>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "112-233-445 95",
+            "fully_covered": true,
+            "covered_characters": 13,
+            "characters": 13
+          }
+        ],
+        "fully_covered": 1,
+        "gold_mentions": 1,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-13",
+      "title": "Логин и IP",
+      "config": "metrika",
+      "text": "Логин клиента @demo_customer_714. IP сессии 192.0.2.48.",
+      "masked": "Логин клиента <RU_PII>. IP сессии <IP_ADDRESS>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "@demo_customer_714",
+            "fully_covered": true,
+            "covered_characters": 18,
+            "characters": 18
+          },
+          {
+            "text": "192.0.2.48",
+            "fully_covered": true,
+            "covered_characters": 10,
+            "characters": 10
+          }
+        ],
+        "fully_covered": 2,
+        "gold_mentions": 2,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-14",
+      "title": "Повтор имени",
+      "config": "metrika",
+      "text": "Марина Соколова оставила почту marina.sokolova@example.com. Позже Марина Соколова подтвердила адрес.",
+      "masked": "<PERSON> оставила почту <EMAIL_ADDRESS>. Позже <PERSON> подтвердила адрес.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Марина Соколова",
+            "fully_covered": true,
+            "covered_characters": 14,
+            "characters": 14
+          },
+          {
+            "text": "marina.sokolova@example.com",
+            "fully_covered": true,
+            "covered_characters": 27,
+            "characters": 27
+          },
+          {
+            "text": "Марина Соколова",
+            "fully_covered": true,
+            "covered_characters": 14,
+            "characters": 14
+          }
+        ],
+        "fully_covered": 3,
+        "gold_mentions": 3,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-15",
+      "title": "Имя с отчеством",
+      "config": "metrika",
+      "text": "Контактное лицо: Виктор Сергеевич Лебедев, телефон +7 903 555 07 24.",
+      "masked": "Контактное лицо: <PERSON>, телефон <PHONE_NUMBER>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Виктор Сергеевич Лебедев",
+            "fully_covered": true,
+            "covered_characters": 22,
+            "characters": 22
+          },
+          {
+            "text": "+7 903 555 07 24",
+            "fully_covered": true,
+            "covered_characters": 12,
+            "characters": 12
+          }
+        ],
+        "fully_covered": 2,
+        "gold_mentions": 2,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-16",
+      "title": "Смешанный текст",
+      "config": "metrika",
+      "text": "Customer Anna Petrova просит ответить на anna.petrova@example.com.",
+      "masked": "Customer <PERSON> просит ответить на <EMAIL_ADDRESS>.",
+      "evaluation": {
+        "mentions": [
+          {
+            "text": "Anna Petrova",
+            "fully_covered": true,
+            "covered_characters": 11,
+            "characters": 11
+          },
+          {
+            "text": "anna.petrova@example.com",
+            "fully_covered": true,
+            "covered_characters": 24,
+            "characters": 24
+          }
+        ],
+        "fully_covered": 2,
+        "gold_mentions": 2,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-17",
+      "title": "Без PII: задача",
+      "config": "metrika",
+      "text": "Задача PAY-315 закрыта после проверки. Нужен повторный запуск тестов.",
+      "masked": "Задача PAY-315 закрыта после проверки. Нужен повторный запуск тестов.",
+      "evaluation": {
+        "mentions": [],
+        "fully_covered": 0,
+        "gold_mentions": 0,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-18",
+      "title": "Без PII: суммы",
+      "config": "metrika",
+      "text": "В заказе 20 кресел, бюджет 300000 рублей. Уточните срок поставки.",
+      "masked": "В заказе 20 кресел, бюджет 300000 рублей. Уточните срок поставки.",
+      "evaluation": {
+        "mentions": [],
+        "fully_covered": 0,
+        "gold_mentions": 0,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-19",
+      "title": "Без PII: версия",
+      "config": "metrika",
+      "text": "Сборка build-20261106.4 прошла тесты, HTTP 200. Ошибок в журнале нет.",
+      "masked": "Сборка build-20261106.4 прошла тесты, HTTP 200. Ошибок в журнале нет.",
+      "evaluation": {
+        "mentions": [],
+        "fully_covered": 0,
+        "gold_mentions": 0,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    },
+    {
+      "id": "case-20",
+      "title": "Без PII: обычный текст",
+      "config": "metrika",
+      "text": "Нужно обновить документацию и проверить инструкцию отката сервиса.",
+      "masked": "Нужно обновить документацию и проверить инструкцию отката сервиса.",
+      "evaluation": {
+        "mentions": [],
+        "fully_covered": 0,
+        "gold_mentions": 0,
+        "extra_characters": 0,
+        "negative_with_finding": false
+      }
+    }
+  ],
+  "fix": {
+    "new_tokens": 12,
+    "tokens_fully_covered": 12,
+    "negatives": 6,
+    "negative_jwt_matches": 0,
+    "negative_any_redaction": 0,
+    "training_performed": false
+  },
+  "crewai": {
+    "actual_framework": "crewai 1.15.36",
+    "api_calls": 2,
+    "tool_calls": 1,
+    "tasks": 4,
+    "comments": 11,
+    "expected_issue_evidence_found": [
+      true,
+      true,
+      true
+    ],
+    "normal_task_correct": true,
+    "citations_with_existing_comment_and_exact_quote": 10,
+    "citations_total": 13,
+    "description_quotes_without_comment_id": [
+      {
+        "task_id": "PAY-241",
+        "matches_description": true
+      },
+      {
+        "task_id": "REL-242",
+        "matches_description": true
+      },
+      {
+        "task_id": "SEC-243",
+        "matches_description": true
+      }
+    ],
+    "known_model_error": "Summary says 8 comments, actual snapshot contains 11; answer preserved without rerun",
+    "extra_issue_note": "Fifth issue about Done versus production is an uncertainty, not an additional established defect",
+    "filter_failure_gateway_calls": 0,
+    "known_originals_in_upstream": false
+  },
+  "litellm": {
+    "real_litellm_proxy": true,
+    "real_presidio_services": true,
+    "provider_calls": 2,
+    "known_originals_checked_at_egress": [
+      "Марина Соколова",
+      "marina.sokolova@example.com"
+    ],
+    "failure_check": {
+      "filter_failure_blocked": true,
+      "gateway_calls_during_failure": 0
+    },
+    "streaming_tested": false,
+    "output_scan_enabled": false,
+    "results": {
+      "presidio-mask": {
+        "provider_answer": "Ответьте <PERSON> (<EMAIL_ADDRESS>).",
+        "client_answer": "Ответьте <PERSON> (<EMAIL_ADDRESS>).",
+        "originals_in_client_answer": []
+      },
+      "presidio-restore": {
+        "provider_answer": "Ответить нужно клиенту <PERSON_1> на почту <EMAIL_ADDRESS_2>.",
+        "client_answer": "Ответить нужно клиенту Марина Соколова на почту marina.sokolova@example.com.",
+        "originals_in_client_answer": [
+          "Марина Соколова",
+          "marina.sokolova@example.com"
+        ]
+      }
+    }
+  },
+  "hashes": {
+    "D07_all_results": "ac3f89179469e46cc73d496b3f189b8da5a5ba27e74ff0137f31f66d214d20a9",
+    "D09_answer": "7b3043051533f39fc6435c84f8bfc45d5e181de1028e55dcfdbd1b01143da1be",
+    "D11_validation": "0f2b35a7666e9c93e2f78df9ebe3f93fe517263a0e816c99f5c5a1c1591af022"
+  },
+  "llm_errors_preserved": true,
+  "runs": {
+    "D07": "evidence/recorded/D07",
+    "D08": "evidence/recorded/D08",
+    "D09": "evidence/recorded/D09",
+    "D11": "evidence/recorded/D11"
+  },
+  "note": "Historical recorded runs; no new inference. Source name-tag idempotency fixed after recording."
+}

@@ -1,0 +1,4076 @@
+[
+  {
+    "config": "baseline",
+    "id": "case-01",
+    "title": "Имя и почта",
+    "text": "Клиент Марина Соколова просит ответить на marina.sokolova@example.com.",
+    "gold": [
+      {
+        "start": 7,
+        "end": 22,
+        "text": "Марина Соколова",
+        "entity_type": "PERSON"
+      },
+      {
+        "start": 42,
+        "end": 69,
+        "text": "marina.sokolova@example.com",
+        "entity_type": "EMAIL_ADDRESS"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PERSON",
+        "start": 7,
+        "end": 22,
+        "score": 0.85,
+        "text": "Марина Соколова",
+        "recognizer": "SpacyRecognizer",
+        "explanation": {
+          "recognizer": "SpacyRecognizer",
+          "pattern_name": null,
+          "pattern": null,
+          "original_score": 0.85,
+          "score": 0.85,
+          "textual_explanation": "Identified as PERSON by Spacy's Named Entity Recognition",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": null,
+          "regex_flags": null
+        }
+      },
+      {
+        "entity_type": "EMAIL_ADDRESS",
+        "start": 42,
+        "end": 69,
+        "score": 1.0,
+        "text": "marina.sokolova@example.com",
+        "recognizer": "EmailRecognizer",
+        "explanation": {
+          "recognizer": "EmailRecognizer",
+          "pattern_name": "Email (Medium)",
+          "pattern": "\\b((([!#$%&'*+\\-/=?^_`{|}~\\w])|([!#$%&'*+\\-/=?^_`{|}~\\w][!#$%&'*+\\-/=?^_`{|}~\\.\\w]{0,}[!#$%&'*+\\-/=?^_`{|}~\\w]))[@]\\w+(?:-+\\w+)*(?:\\.\\w+(?:-+\\w+)*)+)\\b",
+          "original_score": 0.5,
+          "score": 1.0,
+          "textual_explanation": "Detected by `EmailRecognizer` using pattern `Email (Medium)`",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": true,
+          "regex_flags": 26
+        }
+      }
+    ],
+    "raw_model": null,
+    "masked": "Клиент <PERSON> просит ответить на <EMAIL_ADDRESS>.",
+    "analyze_ms": 5.393389001255855,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Марина Соколова",
+          "fully_covered": true,
+          "covered_characters": 14,
+          "characters": 14
+        },
+        {
+          "text": "marina.sokolova@example.com",
+          "fully_covered": true,
+          "covered_characters": 27,
+          "characters": 27
+        }
+      ],
+      "fully_covered": 2,
+      "gold_mentions": 2,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "baseline",
+    "id": "case-02",
+    "title": "Имя в падеже",
+    "text": "Передайте договор Андрею Кузнецову после согласования.",
+    "gold": [
+      {
+        "start": 18,
+        "end": 34,
+        "text": "Андрею Кузнецову",
+        "entity_type": "PERSON"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PERSON",
+        "start": 18,
+        "end": 34,
+        "score": 0.85,
+        "text": "Андрею Кузнецову",
+        "recognizer": "SpacyRecognizer",
+        "explanation": {
+          "recognizer": "SpacyRecognizer",
+          "pattern_name": null,
+          "pattern": null,
+          "original_score": 0.85,
+          "score": 0.85,
+          "textual_explanation": "Identified as PERSON by Spacy's Named Entity Recognition",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": null,
+          "regex_flags": null
+        }
+      }
+    ],
+    "raw_model": null,
+    "masked": "Передайте договор <PERSON> после согласования.",
+    "analyze_ms": 4.224418997182511,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Андрею Кузнецову",
+          "fully_covered": true,
+          "covered_characters": 15,
+          "characters": 15
+        }
+      ],
+      "fully_covered": 1,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "baseline",
+    "id": "case-03",
+    "title": "Двойная фамилия",
+    "text": "Заявку оформила Елена Орлова-Соколова.",
+    "gold": [
+      {
+        "start": 16,
+        "end": 37,
+        "text": "Елена Орлова-Соколова",
+        "entity_type": "PERSON"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PERSON",
+        "start": 16,
+        "end": 37,
+        "score": 0.85,
+        "text": "Елена Орлова-Соколова",
+        "recognizer": "SpacyRecognizer",
+        "explanation": {
+          "recognizer": "SpacyRecognizer",
+          "pattern_name": null,
+          "pattern": null,
+          "original_score": 0.85,
+          "score": 0.85,
+          "textual_explanation": "Identified as PERSON by Spacy's Named Entity Recognition",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": null,
+          "regex_flags": null
+        }
+      }
+    ],
+    "raw_model": null,
+    "masked": "Заявку оформила <PERSON>.",
+    "analyze_ms": 4.064416993060149,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Елена Орлова-Соколова",
+          "fully_covered": true,
+          "covered_characters": 20,
+          "characters": 20
+        }
+      ],
+      "fully_covered": 1,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "baseline",
+    "id": "case-04",
+    "title": "Два участника",
+    "text": "Олег Миронов передал обращение Татьяне Волковой.",
+    "gold": [
+      {
+        "start": 0,
+        "end": 12,
+        "text": "Олег Миронов",
+        "entity_type": "PERSON"
+      },
+      {
+        "start": 31,
+        "end": 47,
+        "text": "Татьяне Волковой",
+        "entity_type": "PERSON"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PERSON",
+        "start": 0,
+        "end": 12,
+        "score": 0.85,
+        "text": "Олег Миронов",
+        "recognizer": "SpacyRecognizer",
+        "explanation": {
+          "recognizer": "SpacyRecognizer",
+          "pattern_name": null,
+          "pattern": null,
+          "original_score": 0.85,
+          "score": 0.85,
+          "textual_explanation": "Identified as PERSON by Spacy's Named Entity Recognition",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": null,
+          "regex_flags": null
+        }
+      },
+      {
+        "entity_type": "PERSON",
+        "start": 31,
+        "end": 47,
+        "score": 0.85,
+        "text": "Татьяне Волковой",
+        "recognizer": "SpacyRecognizer",
+        "explanation": {
+          "recognizer": "SpacyRecognizer",
+          "pattern_name": null,
+          "pattern": null,
+          "original_score": 0.85,
+          "score": 0.85,
+          "textual_explanation": "Identified as PERSON by Spacy's Named Entity Recognition",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": null,
+          "regex_flags": null
+        }
+      }
+    ],
+    "raw_model": null,
+    "masked": "<PERSON> передал обращение <PERSON>.",
+    "analyze_ms": 5.1110229978803545,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Олег Миронов",
+          "fully_covered": true,
+          "covered_characters": 11,
+          "characters": 11
+        },
+        {
+          "text": "Татьяне Волковой",
+          "fully_covered": true,
+          "covered_characters": 15,
+          "characters": 15
+        }
+      ],
+      "fully_covered": 2,
+      "gold_mentions": 2,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "baseline",
+    "id": "case-05",
+    "title": "Почта с alias",
+    "text": "Ответ отправьте на qa.person+case17@example.org и copy.person@example.net.",
+    "gold": [
+      {
+        "start": 19,
+        "end": 47,
+        "text": "qa.person+case17@example.org",
+        "entity_type": "EMAIL_ADDRESS"
+      },
+      {
+        "start": 50,
+        "end": 73,
+        "text": "copy.person@example.net",
+        "entity_type": "EMAIL_ADDRESS"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "EMAIL_ADDRESS",
+        "start": 19,
+        "end": 47,
+        "score": 1.0,
+        "text": "qa.person+case17@example.org",
+        "recognizer": "EmailRecognizer",
+        "explanation": {
+          "recognizer": "EmailRecognizer",
+          "pattern_name": "Email (Medium)",
+          "pattern": "\\b((([!#$%&'*+\\-/=?^_`{|}~\\w])|([!#$%&'*+\\-/=?^_`{|}~\\w][!#$%&'*+\\-/=?^_`{|}~\\.\\w]{0,}[!#$%&'*+\\-/=?^_`{|}~\\w]))[@]\\w+(?:-+\\w+)*(?:\\.\\w+(?:-+\\w+)*)+)\\b",
+          "original_score": 0.5,
+          "score": 1.0,
+          "textual_explanation": "Detected by `EmailRecognizer` using pattern `Email (Medium)`",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": true,
+          "regex_flags": 26
+        }
+      },
+      {
+        "entity_type": "EMAIL_ADDRESS",
+        "start": 50,
+        "end": 73,
+        "score": 1.0,
+        "text": "copy.person@example.net",
+        "recognizer": "EmailRecognizer",
+        "explanation": {
+          "recognizer": "EmailRecognizer",
+          "pattern_name": "Email (Medium)",
+          "pattern": "\\b((([!#$%&'*+\\-/=?^_`{|}~\\w])|([!#$%&'*+\\-/=?^_`{|}~\\w][!#$%&'*+\\-/=?^_`{|}~\\.\\w]{0,}[!#$%&'*+\\-/=?^_`{|}~\\w]))[@]\\w+(?:-+\\w+)*(?:\\.\\w+(?:-+\\w+)*)+)\\b",
+          "original_score": 0.5,
+          "score": 1.0,
+          "textual_explanation": "Detected by `EmailRecognizer` using pattern `Email (Medium)`",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": true,
+          "regex_flags": 26
+        }
+      }
+    ],
+    "raw_model": null,
+    "masked": "Ответ отправьте на <EMAIL_ADDRESS> и <EMAIL_ADDRESS>.",
+    "analyze_ms": 4.086251996341161,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "qa.person+case17@example.org",
+          "fully_covered": true,
+          "covered_characters": 28,
+          "characters": 28
+        },
+        {
+          "text": "copy.person@example.net",
+          "fully_covered": true,
+          "covered_characters": 23,
+          "characters": 23
+        }
+      ],
+      "fully_covered": 2,
+      "gold_mentions": 2,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "baseline",
+    "id": "case-06",
+    "title": "Телефон с форматированием",
+    "text": "Телефон клиента: +7 (916) 555-01-42.",
+    "gold": [
+      {
+        "start": 17,
+        "end": 35,
+        "text": "+7 (916) 555-01-42",
+        "entity_type": "PHONE_NUMBER"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PHONE_NUMBER",
+        "start": 17,
+        "end": 35,
+        "score": 0.75,
+        "text": "+7 (916) 555-01-42",
+        "recognizer": "PhoneRecognizer",
+        "explanation": {
+          "recognizer": "PhoneRecognizer",
+          "pattern_name": null,
+          "pattern": null,
+          "original_score": 0.4,
+          "score": 0.75,
+          "textual_explanation": "Recognized as RU region phone number, using PhoneRecognizer",
+          "score_context_improvement": 0.35,
+          "supportive_context_word": "телефон",
+          "validation_result": null,
+          "regex_flags": null
+        }
+      }
+    ],
+    "raw_model": null,
+    "masked": "Телефон клиента: <PHONE_NUMBER>.",
+    "analyze_ms": 5.772388991317712,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "+7 (916) 555-01-42",
+          "fully_covered": true,
+          "covered_characters": 16,
+          "characters": 16
+        }
+      ],
+      "fully_covered": 1,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "baseline",
+    "id": "case-07",
+    "title": "Телефон в нескольких строках",
+    "text": "Контакт для связи:\n+7 921 555 03 18\nПозвонить после согласования.",
+    "gold": [
+      {
+        "start": 19,
+        "end": 35,
+        "text": "+7 921 555 03 18",
+        "entity_type": "PHONE_NUMBER"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PHONE_NUMBER",
+        "start": 19,
+        "end": 35,
+        "score": 0.75,
+        "text": "+7 921 555 03 18",
+        "recognizer": "PhoneRecognizer",
+        "explanation": {
+          "recognizer": "PhoneRecognizer",
+          "pattern_name": null,
+          "pattern": null,
+          "original_score": 0.4,
+          "score": 0.75,
+          "textual_explanation": "Recognized as RU region phone number, using PhoneRecognizer",
+          "score_context_improvement": 0.35,
+          "supportive_context_word": "контакт",
+          "validation_result": null,
+          "regex_flags": null
+        }
+      }
+    ],
+    "raw_model": null,
+    "masked": "Контакт для связи:\n<PHONE_NUMBER>\nПозвонить после согласования.",
+    "analyze_ms": 4.713004003860988,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "+7 921 555 03 18",
+          "fully_covered": true,
+          "covered_characters": 12,
+          "characters": 12
+        }
+      ],
+      "fully_covered": 1,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "baseline",
+    "id": "case-08",
+    "title": "Полный адрес",
+    "text": "Адрес доставки: г. Тверь, ул. Лесная, д. 14, кв. 23.",
+    "gold": [
+      {
+        "start": 16,
+        "end": 51,
+        "text": "г. Тверь, ул. Лесная, д. 14, кв. 23",
+        "entity_type": "LOCATION"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "LOCATION",
+        "start": 19,
+        "end": 24,
+        "score": 0.85,
+        "text": "Тверь",
+        "recognizer": "SpacyRecognizer",
+        "explanation": {
+          "recognizer": "SpacyRecognizer",
+          "pattern_name": null,
+          "pattern": null,
+          "original_score": 0.85,
+          "score": 0.85,
+          "textual_explanation": "Identified as LOCATION by Spacy's Named Entity Recognition",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": null,
+          "regex_flags": null
+        }
+      },
+      {
+        "entity_type": "LOCATION",
+        "start": 30,
+        "end": 36,
+        "score": 0.85,
+        "text": "Лесная",
+        "recognizer": "SpacyRecognizer",
+        "explanation": {
+          "recognizer": "SpacyRecognizer",
+          "pattern_name": null,
+          "pattern": null,
+          "original_score": 0.85,
+          "score": 0.85,
+          "textual_explanation": "Identified as LOCATION by Spacy's Named Entity Recognition",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": null,
+          "regex_flags": null
+        }
+      }
+    ],
+    "raw_model": null,
+    "masked": "Адрес доставки: г. <LOCATION>, ул. <LOCATION>, д. 14, кв. 23.",
+    "analyze_ms": 4.631072995834984,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "г. Тверь, ул. Лесная, д. 14, кв. 23",
+          "fully_covered": false,
+          "covered_characters": 11,
+          "characters": 28
+        }
+      ],
+      "fully_covered": 0,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "baseline",
+    "id": "case-09",
+    "title": "Адрес без индекса",
+    "text": "Клиент живет по адресу: Казань, улица Полевая, дом 8, квартира 17.",
+    "gold": [
+      {
+        "start": 24,
+        "end": 65,
+        "text": "Казань, улица Полевая, дом 8, квартира 17",
+        "entity_type": "LOCATION"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "LOCATION",
+        "start": 24,
+        "end": 30,
+        "score": 0.85,
+        "text": "Казань",
+        "recognizer": "SpacyRecognizer",
+        "explanation": {
+          "recognizer": "SpacyRecognizer",
+          "pattern_name": null,
+          "pattern": null,
+          "original_score": 0.85,
+          "score": 0.85,
+          "textual_explanation": "Identified as LOCATION by Spacy's Named Entity Recognition",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": null,
+          "regex_flags": null
+        }
+      },
+      {
+        "entity_type": "LOCATION",
+        "start": 38,
+        "end": 45,
+        "score": 0.85,
+        "text": "Полевая",
+        "recognizer": "SpacyRecognizer",
+        "explanation": {
+          "recognizer": "SpacyRecognizer",
+          "pattern_name": null,
+          "pattern": null,
+          "original_score": 0.85,
+          "score": 0.85,
+          "textual_explanation": "Identified as LOCATION by Spacy's Named Entity Recognition",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": null,
+          "regex_flags": null
+        }
+      }
+    ],
+    "raw_model": null,
+    "masked": "Клиент живет по адресу: <LOCATION>, улица <LOCATION>, дом 8, квартира 17.",
+    "analyze_ms": 5.310102002113126,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Казань, улица Полевая, дом 8, квартира 17",
+          "fully_covered": false,
+          "covered_characters": 13,
+          "characters": 35
+        }
+      ],
+      "fully_covered": 0,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "baseline",
+    "id": "case-10",
+    "title": "Дата рождения",
+    "text": "В анкете указана дата рождения: 17.08.1986.",
+    "gold": [
+      {
+        "start": 32,
+        "end": 42,
+        "text": "17.08.1986",
+        "entity_type": "DATE_TIME"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "DATE_TIME",
+        "start": 32,
+        "end": 42,
+        "score": 0.6,
+        "text": "17.08.1986",
+        "recognizer": "DateRecognizer",
+        "explanation": {
+          "recognizer": "DateRecognizer",
+          "pattern_name": "dd.mm.yyyy or dd.mm.yy",
+          "pattern": "\\b(([1-9]|0[1-9]|[1-2][0-9]|3[0-1])\\.([1-9]|0[1-9]|1[0-2])\\.(\\d{4}|\\d{2}))\\b",
+          "original_score": 0.6,
+          "score": 0.6,
+          "textual_explanation": "Detected by `DateRecognizer` using pattern `dd.mm.yyyy or dd.mm.yy`",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": null,
+          "regex_flags": 26
+        }
+      }
+    ],
+    "raw_model": null,
+    "masked": "В анкете указана дата рождения: <DATE_TIME>.",
+    "analyze_ms": 4.3569349945755675,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "17.08.1986",
+          "fully_covered": true,
+          "covered_characters": 10,
+          "characters": 10
+        }
+      ],
+      "fully_covered": 1,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "baseline",
+    "id": "case-11",
+    "title": "Паспорт",
+    "text": "Паспорт клиента: серия 4512, номер 654321.",
+    "gold": [
+      {
+        "start": 23,
+        "end": 27,
+        "text": "4512",
+        "entity_type": "RU_PII"
+      },
+      {
+        "start": 35,
+        "end": 41,
+        "text": "654321",
+        "entity_type": "RU_PII"
+      }
+    ],
+    "found": [],
+    "raw_model": null,
+    "masked": "Паспорт клиента: серия 4512, номер 654321.",
+    "analyze_ms": 3.737453997018747,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "4512",
+          "fully_covered": false,
+          "covered_characters": 0,
+          "characters": 4
+        },
+        {
+          "text": "654321",
+          "fully_covered": false,
+          "covered_characters": 0,
+          "characters": 6
+        }
+      ],
+      "fully_covered": 0,
+      "gold_mentions": 2,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "baseline",
+    "id": "case-12",
+    "title": "СНИЛС",
+    "text": "СНИЛС в учебной анкете: 112-233-445 95.",
+    "gold": [
+      {
+        "start": 24,
+        "end": 38,
+        "text": "112-233-445 95",
+        "entity_type": "RU_PII"
+      }
+    ],
+    "found": [],
+    "raw_model": null,
+    "masked": "СНИЛС в учебной анкете: 112-233-445 95.",
+    "analyze_ms": 4.58410699502565,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "112-233-445 95",
+          "fully_covered": false,
+          "covered_characters": 0,
+          "characters": 13
+        }
+      ],
+      "fully_covered": 0,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "baseline",
+    "id": "case-13",
+    "title": "Логин и IP",
+    "text": "Логин клиента @demo_customer_714. IP сессии 192.0.2.48.",
+    "gold": [
+      {
+        "start": 14,
+        "end": 32,
+        "text": "@demo_customer_714",
+        "entity_type": "RU_PII"
+      },
+      {
+        "start": 44,
+        "end": 54,
+        "text": "192.0.2.48",
+        "entity_type": "IP_ADDRESS"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PERSON",
+        "start": 0,
+        "end": 5,
+        "score": 0.85,
+        "text": "Логин",
+        "recognizer": "SpacyRecognizer",
+        "explanation": {
+          "recognizer": "SpacyRecognizer",
+          "pattern_name": null,
+          "pattern": null,
+          "original_score": 0.85,
+          "score": 0.85,
+          "textual_explanation": "Identified as PERSON by Spacy's Named Entity Recognition",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": null,
+          "regex_flags": null
+        }
+      },
+      {
+        "entity_type": "IP_ADDRESS",
+        "start": 44,
+        "end": 54,
+        "score": 0.95,
+        "text": "192.0.2.48",
+        "recognizer": "IpRecognizer",
+        "explanation": {
+          "recognizer": "IpRecognizer",
+          "pattern_name": "IPv4",
+          "pattern": "\\b(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:/(?:[0-2]?\\d|3[0-2]))?\\b",
+          "original_score": 0.6,
+          "score": 0.95,
+          "textual_explanation": "Detected by `IpRecognizer` using pattern `IPv4`",
+          "score_context_improvement": 0.35,
+          "supportive_context_word": "ip",
+          "validation_result": null,
+          "regex_flags": 26
+        }
+      }
+    ],
+    "raw_model": null,
+    "masked": "<PERSON> клиента @demo_customer_714. IP сессии <IP_ADDRESS>.",
+    "analyze_ms": 4.966710999724455,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "@demo_customer_714",
+          "fully_covered": false,
+          "covered_characters": 0,
+          "characters": 18
+        },
+        {
+          "text": "192.0.2.48",
+          "fully_covered": true,
+          "covered_characters": 10,
+          "characters": 10
+        }
+      ],
+      "fully_covered": 1,
+      "gold_mentions": 2,
+      "extra_characters": 5,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "baseline",
+    "id": "case-14",
+    "title": "Повтор имени",
+    "text": "Марина Соколова оставила почту marina.sokolova@example.com. Позже Марина Соколова подтвердила адрес.",
+    "gold": [
+      {
+        "start": 0,
+        "end": 15,
+        "text": "Марина Соколова",
+        "entity_type": "PERSON"
+      },
+      {
+        "start": 31,
+        "end": 58,
+        "text": "marina.sokolova@example.com",
+        "entity_type": "EMAIL_ADDRESS"
+      },
+      {
+        "start": 66,
+        "end": 81,
+        "text": "Марина Соколова",
+        "entity_type": "PERSON"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PERSON",
+        "start": 0,
+        "end": 15,
+        "score": 0.85,
+        "text": "Марина Соколова",
+        "recognizer": "SpacyRecognizer",
+        "explanation": {
+          "recognizer": "SpacyRecognizer",
+          "pattern_name": null,
+          "pattern": null,
+          "original_score": 0.85,
+          "score": 0.85,
+          "textual_explanation": "Identified as PERSON by Spacy's Named Entity Recognition",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": null,
+          "regex_flags": null
+        }
+      },
+      {
+        "entity_type": "EMAIL_ADDRESS",
+        "start": 31,
+        "end": 58,
+        "score": 1.0,
+        "text": "marina.sokolova@example.com",
+        "recognizer": "EmailRecognizer",
+        "explanation": {
+          "recognizer": "EmailRecognizer",
+          "pattern_name": "Email (Medium)",
+          "pattern": "\\b((([!#$%&'*+\\-/=?^_`{|}~\\w])|([!#$%&'*+\\-/=?^_`{|}~\\w][!#$%&'*+\\-/=?^_`{|}~\\.\\w]{0,}[!#$%&'*+\\-/=?^_`{|}~\\w]))[@]\\w+(?:-+\\w+)*(?:\\.\\w+(?:-+\\w+)*)+)\\b",
+          "original_score": 0.5,
+          "score": 1.0,
+          "textual_explanation": "Detected by `EmailRecognizer` using pattern `Email (Medium)`",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": true,
+          "regex_flags": 26
+        }
+      },
+      {
+        "entity_type": "PERSON",
+        "start": 66,
+        "end": 81,
+        "score": 0.85,
+        "text": "Марина Соколова",
+        "recognizer": "SpacyRecognizer",
+        "explanation": {
+          "recognizer": "SpacyRecognizer",
+          "pattern_name": null,
+          "pattern": null,
+          "original_score": 0.85,
+          "score": 0.85,
+          "textual_explanation": "Identified as PERSON by Spacy's Named Entity Recognition",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": null,
+          "regex_flags": null
+        }
+      }
+    ],
+    "raw_model": null,
+    "masked": "<PERSON> оставила почту <EMAIL_ADDRESS>. Позже <PERSON> подтвердила адрес.",
+    "analyze_ms": 4.897177001112141,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Марина Соколова",
+          "fully_covered": true,
+          "covered_characters": 14,
+          "characters": 14
+        },
+        {
+          "text": "marina.sokolova@example.com",
+          "fully_covered": true,
+          "covered_characters": 27,
+          "characters": 27
+        },
+        {
+          "text": "Марина Соколова",
+          "fully_covered": true,
+          "covered_characters": 14,
+          "characters": 14
+        }
+      ],
+      "fully_covered": 3,
+      "gold_mentions": 3,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "baseline",
+    "id": "case-15",
+    "title": "Имя с отчеством",
+    "text": "Контактное лицо: Виктор Сергеевич Лебедев, телефон +7 903 555 07 24.",
+    "gold": [
+      {
+        "start": 17,
+        "end": 41,
+        "text": "Виктор Сергеевич Лебедев",
+        "entity_type": "PERSON"
+      },
+      {
+        "start": 51,
+        "end": 67,
+        "text": "+7 903 555 07 24",
+        "entity_type": "PHONE_NUMBER"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PERSON",
+        "start": 17,
+        "end": 41,
+        "score": 0.85,
+        "text": "Виктор Сергеевич Лебедев",
+        "recognizer": "SpacyRecognizer",
+        "explanation": {
+          "recognizer": "SpacyRecognizer",
+          "pattern_name": null,
+          "pattern": null,
+          "original_score": 0.85,
+          "score": 0.85,
+          "textual_explanation": "Identified as PERSON by Spacy's Named Entity Recognition",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": null,
+          "regex_flags": null
+        }
+      },
+      {
+        "entity_type": "PHONE_NUMBER",
+        "start": 51,
+        "end": 67,
+        "score": 0.75,
+        "text": "+7 903 555 07 24",
+        "recognizer": "PhoneRecognizer",
+        "explanation": {
+          "recognizer": "PhoneRecognizer",
+          "pattern_name": null,
+          "pattern": null,
+          "original_score": 0.4,
+          "score": 0.75,
+          "textual_explanation": "Recognized as RU region phone number, using PhoneRecognizer",
+          "score_context_improvement": 0.35,
+          "supportive_context_word": "телефон",
+          "validation_result": null,
+          "regex_flags": null
+        }
+      }
+    ],
+    "raw_model": null,
+    "masked": "Контактное лицо: <PERSON>, телефон <PHONE_NUMBER>.",
+    "analyze_ms": 4.9448420031694695,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Виктор Сергеевич Лебедев",
+          "fully_covered": true,
+          "covered_characters": 22,
+          "characters": 22
+        },
+        {
+          "text": "+7 903 555 07 24",
+          "fully_covered": true,
+          "covered_characters": 12,
+          "characters": 12
+        }
+      ],
+      "fully_covered": 2,
+      "gold_mentions": 2,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "baseline",
+    "id": "case-16",
+    "title": "Смешанный текст",
+    "text": "Customer Anna Petrova просит ответить на anna.petrova@example.com.",
+    "gold": [
+      {
+        "start": 9,
+        "end": 21,
+        "text": "Anna Petrova",
+        "entity_type": "PERSON"
+      },
+      {
+        "start": 41,
+        "end": 65,
+        "text": "anna.petrova@example.com",
+        "entity_type": "EMAIL_ADDRESS"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "EMAIL_ADDRESS",
+        "start": 41,
+        "end": 65,
+        "score": 1.0,
+        "text": "anna.petrova@example.com",
+        "recognizer": "EmailRecognizer",
+        "explanation": {
+          "recognizer": "EmailRecognizer",
+          "pattern_name": "Email (Medium)",
+          "pattern": "\\b((([!#$%&'*+\\-/=?^_`{|}~\\w])|([!#$%&'*+\\-/=?^_`{|}~\\w][!#$%&'*+\\-/=?^_`{|}~\\.\\w]{0,}[!#$%&'*+\\-/=?^_`{|}~\\w]))[@]\\w+(?:-+\\w+)*(?:\\.\\w+(?:-+\\w+)*)+)\\b",
+          "original_score": 0.5,
+          "score": 1.0,
+          "textual_explanation": "Detected by `EmailRecognizer` using pattern `Email (Medium)`",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": true,
+          "regex_flags": 26
+        }
+      }
+    ],
+    "raw_model": null,
+    "masked": "Customer Anna Petrova просит ответить на <EMAIL_ADDRESS>.",
+    "analyze_ms": 4.621828004019335,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Anna Petrova",
+          "fully_covered": false,
+          "covered_characters": 0,
+          "characters": 11
+        },
+        {
+          "text": "anna.petrova@example.com",
+          "fully_covered": true,
+          "covered_characters": 24,
+          "characters": 24
+        }
+      ],
+      "fully_covered": 1,
+      "gold_mentions": 2,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "baseline",
+    "id": "case-17",
+    "title": "Без PII: задача",
+    "text": "Задача PAY-315 закрыта после проверки. Нужен повторный запуск тестов.",
+    "gold": [],
+    "found": [],
+    "raw_model": null,
+    "masked": "Задача PAY-315 закрыта после проверки. Нужен повторный запуск тестов.",
+    "analyze_ms": 4.833461993257515,
+    "evaluation": {
+      "mentions": [],
+      "fully_covered": 0,
+      "gold_mentions": 0,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "baseline",
+    "id": "case-18",
+    "title": "Без PII: суммы",
+    "text": "В заказе 20 кресел, бюджет 300000 рублей. Уточните срок поставки.",
+    "gold": [],
+    "found": [],
+    "raw_model": null,
+    "masked": "В заказе 20 кресел, бюджет 300000 рублей. Уточните срок поставки.",
+    "analyze_ms": 4.841164001845755,
+    "evaluation": {
+      "mentions": [],
+      "fully_covered": 0,
+      "gold_mentions": 0,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "baseline",
+    "id": "case-19",
+    "title": "Без PII: версия",
+    "text": "Сборка build-20261106.4 прошла тесты, HTTP 200. Ошибок в журнале нет.",
+    "gold": [],
+    "found": [],
+    "raw_model": null,
+    "masked": "Сборка build-20261106.4 прошла тесты, HTTP 200. Ошибок в журнале нет.",
+    "analyze_ms": 4.755385001772083,
+    "evaluation": {
+      "mentions": [],
+      "fully_covered": 0,
+      "gold_mentions": 0,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "baseline",
+    "id": "case-20",
+    "title": "Без PII: обычный текст",
+    "text": "Нужно обновить документацию и проверить инструкцию отката сервиса.",
+    "gold": [],
+    "found": [],
+    "raw_model": null,
+    "masked": "Нужно обновить документацию и проверить инструкцию отката сервиса.",
+    "analyze_ms": 4.276068008039147,
+    "evaluation": {
+      "mentions": [],
+      "fully_covered": 0,
+      "gold_mentions": 0,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "fastino",
+    "id": "case-01",
+    "title": "Имя и почта",
+    "text": "Клиент Марина Соколова просит ответить на marina.sokolova@example.com.",
+    "gold": [
+      {
+        "start": 7,
+        "end": 22,
+        "text": "Марина Соколова",
+        "entity_type": "PERSON"
+      },
+      {
+        "start": 42,
+        "end": 69,
+        "text": "marina.sokolova@example.com",
+        "entity_type": "EMAIL_ADDRESS"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PERSON",
+        "start": 7,
+        "end": 22,
+        "score": 0.9984614849090576,
+        "text": "Марина Соколова",
+        "recognizer": "fastino_GLiNER25"
+      },
+      {
+        "entity_type": "EMAIL_ADDRESS",
+        "start": 42,
+        "end": 69,
+        "score": 1.0,
+        "text": "marina.sokolova@example.com",
+        "recognizer": "EmailRecognizer",
+        "explanation": {
+          "recognizer": "EmailRecognizer",
+          "pattern_name": "Email (Medium)",
+          "pattern": "\\b((([!#$%&'*+\\-/=?^_`{|}~\\w])|([!#$%&'*+\\-/=?^_`{|}~\\w][!#$%&'*+\\-/=?^_`{|}~\\.\\w]{0,}[!#$%&'*+\\-/=?^_`{|}~\\w]))[@]\\w+(?:-+\\w+)*(?:\\.\\w+(?:-+\\w+)*)+)\\b",
+          "original_score": 0.5,
+          "score": 1.0,
+          "textual_explanation": "Detected by `EmailRecognizer` using pattern `Email (Medium)`",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": true,
+          "regex_flags": 26
+        }
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "person": [
+          {
+            "text": "Марина Соколова",
+            "confidence": 0.9984614849090576,
+            "start": 7,
+            "end": 22
+          }
+        ],
+        "location": [],
+        "date of birth": [],
+        "phone number": [],
+        "email address": [
+          {
+            "text": "marina.sokolova@example.com",
+            "confidence": 0.9948284029960632,
+            "start": 42,
+            "end": 69
+          }
+        ],
+        "personal identifier": []
+      }
+    },
+    "masked": "Клиент <PERSON> просит ответить на <EMAIL_ADDRESS>.",
+    "analyze_ms": 122.37300799461082,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Марина Соколова",
+          "fully_covered": true,
+          "covered_characters": 14,
+          "characters": 14
+        },
+        {
+          "text": "marina.sokolova@example.com",
+          "fully_covered": true,
+          "covered_characters": 27,
+          "characters": 27
+        }
+      ],
+      "fully_covered": 2,
+      "gold_mentions": 2,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "fastino",
+    "id": "case-02",
+    "title": "Имя в падеже",
+    "text": "Передайте договор Андрею Кузнецову после согласования.",
+    "gold": [
+      {
+        "start": 18,
+        "end": 34,
+        "text": "Андрею Кузнецову",
+        "entity_type": "PERSON"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PERSON",
+        "start": 18,
+        "end": 34,
+        "score": 0.9992597699165344,
+        "text": "Андрею Кузнецову",
+        "recognizer": "fastino_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "person": [
+          {
+            "text": "Андрею Кузнецову",
+            "confidence": 0.9992597699165344,
+            "start": 18,
+            "end": 34
+          }
+        ],
+        "location": [],
+        "date of birth": [],
+        "phone number": [],
+        "email address": [],
+        "personal identifier": []
+      }
+    },
+    "masked": "Передайте договор <PERSON> после согласования.",
+    "analyze_ms": 108.93147501337808,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Андрею Кузнецову",
+          "fully_covered": true,
+          "covered_characters": 15,
+          "characters": 15
+        }
+      ],
+      "fully_covered": 1,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "fastino",
+    "id": "case-03",
+    "title": "Двойная фамилия",
+    "text": "Заявку оформила Елена Орлова-Соколова.",
+    "gold": [
+      {
+        "start": 16,
+        "end": 37,
+        "text": "Елена Орлова-Соколова",
+        "entity_type": "PERSON"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PERSON",
+        "start": 16,
+        "end": 37,
+        "score": 0.998206615447998,
+        "text": "Елена Орлова-Соколова",
+        "recognizer": "fastino_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "person": [
+          {
+            "text": "Елена Орлова-Соколова",
+            "confidence": 0.998206615447998,
+            "start": 16,
+            "end": 37
+          }
+        ],
+        "location": [],
+        "date of birth": [],
+        "phone number": [],
+        "email address": [],
+        "personal identifier": []
+      }
+    },
+    "masked": "Заявку оформила <PERSON>.",
+    "analyze_ms": 105.02047899353784,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Елена Орлова-Соколова",
+          "fully_covered": true,
+          "covered_characters": 20,
+          "characters": 20
+        }
+      ],
+      "fully_covered": 1,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "fastino",
+    "id": "case-04",
+    "title": "Два участника",
+    "text": "Олег Миронов передал обращение Татьяне Волковой.",
+    "gold": [
+      {
+        "start": 0,
+        "end": 12,
+        "text": "Олег Миронов",
+        "entity_type": "PERSON"
+      },
+      {
+        "start": 31,
+        "end": 47,
+        "text": "Татьяне Волковой",
+        "entity_type": "PERSON"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PERSON",
+        "start": 0,
+        "end": 12,
+        "score": 0.9954627156257629,
+        "text": "Олег Миронов",
+        "recognizer": "fastino_GLiNER25"
+      },
+      {
+        "entity_type": "PERSON",
+        "start": 31,
+        "end": 47,
+        "score": 0.9961102604866028,
+        "text": "Татьяне Волковой",
+        "recognizer": "fastino_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "person": [
+          {
+            "text": "Татьяне Волковой",
+            "confidence": 0.9961102604866028,
+            "start": 31,
+            "end": 47
+          },
+          {
+            "text": "Олег Миронов",
+            "confidence": 0.9954627156257629,
+            "start": 0,
+            "end": 12
+          }
+        ],
+        "location": [],
+        "date of birth": [],
+        "phone number": [],
+        "email address": [],
+        "personal identifier": []
+      }
+    },
+    "masked": "<PERSON> передал обращение <PERSON>.",
+    "analyze_ms": 112.15487300069071,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Олег Миронов",
+          "fully_covered": true,
+          "covered_characters": 11,
+          "characters": 11
+        },
+        {
+          "text": "Татьяне Волковой",
+          "fully_covered": true,
+          "covered_characters": 15,
+          "characters": 15
+        }
+      ],
+      "fully_covered": 2,
+      "gold_mentions": 2,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "fastino",
+    "id": "case-05",
+    "title": "Почта с alias",
+    "text": "Ответ отправьте на qa.person+case17@example.org и copy.person@example.net.",
+    "gold": [
+      {
+        "start": 19,
+        "end": 47,
+        "text": "qa.person+case17@example.org",
+        "entity_type": "EMAIL_ADDRESS"
+      },
+      {
+        "start": 50,
+        "end": 73,
+        "text": "copy.person@example.net",
+        "entity_type": "EMAIL_ADDRESS"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "EMAIL_ADDRESS",
+        "start": 19,
+        "end": 47,
+        "score": 1.0,
+        "text": "qa.person+case17@example.org",
+        "recognizer": "EmailRecognizer",
+        "explanation": {
+          "recognizer": "EmailRecognizer",
+          "pattern_name": "Email (Medium)",
+          "pattern": "\\b((([!#$%&'*+\\-/=?^_`{|}~\\w])|([!#$%&'*+\\-/=?^_`{|}~\\w][!#$%&'*+\\-/=?^_`{|}~\\.\\w]{0,}[!#$%&'*+\\-/=?^_`{|}~\\w]))[@]\\w+(?:-+\\w+)*(?:\\.\\w+(?:-+\\w+)*)+)\\b",
+          "original_score": 0.5,
+          "score": 1.0,
+          "textual_explanation": "Detected by `EmailRecognizer` using pattern `Email (Medium)`",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": true,
+          "regex_flags": 26
+        }
+      },
+      {
+        "entity_type": "EMAIL_ADDRESS",
+        "start": 50,
+        "end": 73,
+        "score": 1.0,
+        "text": "copy.person@example.net",
+        "recognizer": "EmailRecognizer",
+        "explanation": {
+          "recognizer": "EmailRecognizer",
+          "pattern_name": "Email (Medium)",
+          "pattern": "\\b((([!#$%&'*+\\-/=?^_`{|}~\\w])|([!#$%&'*+\\-/=?^_`{|}~\\w][!#$%&'*+\\-/=?^_`{|}~\\.\\w]{0,}[!#$%&'*+\\-/=?^_`{|}~\\w]))[@]\\w+(?:-+\\w+)*(?:\\.\\w+(?:-+\\w+)*)+)\\b",
+          "original_score": 0.5,
+          "score": 1.0,
+          "textual_explanation": "Detected by `EmailRecognizer` using pattern `Email (Medium)`",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": true,
+          "regex_flags": 26
+        }
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "person": [],
+        "location": [],
+        "date of birth": [],
+        "phone number": [],
+        "email address": [
+          {
+            "text": "qa.person+case17@example.org",
+            "confidence": 0.9807106852531433,
+            "start": 19,
+            "end": 47
+          },
+          {
+            "text": "copy.person@example.net",
+            "confidence": 0.9805479049682617,
+            "start": 50,
+            "end": 73
+          }
+        ],
+        "personal identifier": []
+      }
+    },
+    "masked": "Ответ отправьте на <EMAIL_ADDRESS> и <EMAIL_ADDRESS>.",
+    "analyze_ms": 126.31239100301173,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "qa.person+case17@example.org",
+          "fully_covered": true,
+          "covered_characters": 28,
+          "characters": 28
+        },
+        {
+          "text": "copy.person@example.net",
+          "fully_covered": true,
+          "covered_characters": 23,
+          "characters": 23
+        }
+      ],
+      "fully_covered": 2,
+      "gold_mentions": 2,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "fastino",
+    "id": "case-06",
+    "title": "Телефон с форматированием",
+    "text": "Телефон клиента: +7 (916) 555-01-42.",
+    "gold": [
+      {
+        "start": 17,
+        "end": 35,
+        "text": "+7 (916) 555-01-42",
+        "entity_type": "PHONE_NUMBER"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PHONE_NUMBER",
+        "start": 17,
+        "end": 35,
+        "score": 0.9870820045471191,
+        "text": "+7 (916) 555-01-42",
+        "recognizer": "fastino_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "person": [],
+        "location": [],
+        "date of birth": [],
+        "phone number": [
+          {
+            "text": "+7 (916) 555-01-42",
+            "confidence": 0.9870820045471191,
+            "start": 17,
+            "end": 35
+          }
+        ],
+        "email address": [],
+        "personal identifier": []
+      }
+    },
+    "masked": "Телефон клиента: <PHONE_NUMBER>.",
+    "analyze_ms": 115.38144199585076,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "+7 (916) 555-01-42",
+          "fully_covered": true,
+          "covered_characters": 16,
+          "characters": 16
+        }
+      ],
+      "fully_covered": 1,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "fastino",
+    "id": "case-07",
+    "title": "Телефон в нескольких строках",
+    "text": "Контакт для связи:\n+7 921 555 03 18\nПозвонить после согласования.",
+    "gold": [
+      {
+        "start": 19,
+        "end": 35,
+        "text": "+7 921 555 03 18",
+        "entity_type": "PHONE_NUMBER"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PHONE_NUMBER",
+        "start": 19,
+        "end": 35,
+        "score": 0.9951196908950806,
+        "text": "+7 921 555 03 18",
+        "recognizer": "fastino_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "person": [],
+        "location": [],
+        "date of birth": [],
+        "phone number": [
+          {
+            "text": "+7 921 555 03 18",
+            "confidence": 0.9951196908950806,
+            "start": 19,
+            "end": 35
+          }
+        ],
+        "email address": [],
+        "personal identifier": []
+      }
+    },
+    "masked": "Контакт для связи:\n<PHONE_NUMBER>\nПозвонить после согласования.",
+    "analyze_ms": 126.00670699612238,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "+7 921 555 03 18",
+          "fully_covered": true,
+          "covered_characters": 12,
+          "characters": 12
+        }
+      ],
+      "fully_covered": 1,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "fastino",
+    "id": "case-08",
+    "title": "Полный адрес",
+    "text": "Адрес доставки: г. Тверь, ул. Лесная, д. 14, кв. 23.",
+    "gold": [
+      {
+        "start": 16,
+        "end": 51,
+        "text": "г. Тверь, ул. Лесная, д. 14, кв. 23",
+        "entity_type": "LOCATION"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "LOCATION",
+        "start": 16,
+        "end": 24,
+        "score": 0.7898441553115845,
+        "text": "г. Тверь",
+        "recognizer": "fastino_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "person": [],
+        "location": [
+          {
+            "text": "г. Тверь",
+            "confidence": 0.7898441553115845,
+            "start": 16,
+            "end": 24
+          }
+        ],
+        "date of birth": [],
+        "phone number": [],
+        "email address": [],
+        "personal identifier": []
+      }
+    },
+    "masked": "Адрес доставки: <LOCATION>, ул. Лесная, д. 14, кв. 23.",
+    "analyze_ms": 149.74264700140338,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "г. Тверь, ул. Лесная, д. 14, кв. 23",
+          "fully_covered": false,
+          "covered_characters": 7,
+          "characters": 28
+        }
+      ],
+      "fully_covered": 0,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "fastino",
+    "id": "case-09",
+    "title": "Адрес без индекса",
+    "text": "Клиент живет по адресу: Казань, улица Полевая, дом 8, квартира 17.",
+    "gold": [
+      {
+        "start": 24,
+        "end": 65,
+        "text": "Казань, улица Полевая, дом 8, квартира 17",
+        "entity_type": "LOCATION"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "LOCATION",
+        "start": 24,
+        "end": 30,
+        "score": 0.8184015154838562,
+        "text": "Казань",
+        "recognizer": "fastino_GLiNER25"
+      },
+      {
+        "entity_type": "LOCATION",
+        "start": 54,
+        "end": 65,
+        "score": 0.5487352609634399,
+        "text": "квартира 17",
+        "recognizer": "fastino_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "person": [],
+        "location": [
+          {
+            "text": "Казань",
+            "confidence": 0.8184015154838562,
+            "start": 24,
+            "end": 30
+          },
+          {
+            "text": "квартира 17",
+            "confidence": 0.5487352609634399,
+            "start": 54,
+            "end": 65
+          }
+        ],
+        "date of birth": [],
+        "phone number": [],
+        "email address": [],
+        "personal identifier": []
+      }
+    },
+    "masked": "Клиент живет по адресу: <LOCATION>, улица Полевая, дом 8, <LOCATION>.",
+    "analyze_ms": 109.18246500659734,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Казань, улица Полевая, дом 8, квартира 17",
+          "fully_covered": false,
+          "covered_characters": 16,
+          "characters": 35
+        }
+      ],
+      "fully_covered": 0,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "fastino",
+    "id": "case-10",
+    "title": "Дата рождения",
+    "text": "В анкете указана дата рождения: 17.08.1986.",
+    "gold": [
+      {
+        "start": 32,
+        "end": 42,
+        "text": "17.08.1986",
+        "entity_type": "DATE_TIME"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "DATE_TIME",
+        "start": 32,
+        "end": 42,
+        "score": 0.9976024031639099,
+        "text": "17.08.1986",
+        "recognizer": "fastino_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "person": [],
+        "location": [],
+        "date of birth": [
+          {
+            "text": "17.08.1986",
+            "confidence": 0.9976024031639099,
+            "start": 32,
+            "end": 42
+          }
+        ],
+        "phone number": [],
+        "email address": [],
+        "personal identifier": []
+      }
+    },
+    "masked": "В анкете указана дата рождения: <DATE_TIME>.",
+    "analyze_ms": 109.91550899052527,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "17.08.1986",
+          "fully_covered": true,
+          "covered_characters": 10,
+          "characters": 10
+        }
+      ],
+      "fully_covered": 1,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "fastino",
+    "id": "case-11",
+    "title": "Паспорт",
+    "text": "Паспорт клиента: серия 4512, номер 654321.",
+    "gold": [
+      {
+        "start": 23,
+        "end": 27,
+        "text": "4512",
+        "entity_type": "RU_PII"
+      },
+      {
+        "start": 35,
+        "end": 41,
+        "text": "654321",
+        "entity_type": "RU_PII"
+      }
+    ],
+    "found": [],
+    "raw_model": {
+      "entities": {
+        "person": [],
+        "location": [],
+        "date of birth": [],
+        "phone number": [],
+        "email address": [],
+        "personal identifier": []
+      }
+    },
+    "masked": "Паспорт клиента: серия 4512, номер 654321.",
+    "analyze_ms": 95.65401299914811,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "4512",
+          "fully_covered": false,
+          "covered_characters": 0,
+          "characters": 4
+        },
+        {
+          "text": "654321",
+          "fully_covered": false,
+          "covered_characters": 0,
+          "characters": 6
+        }
+      ],
+      "fully_covered": 0,
+      "gold_mentions": 2,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "fastino",
+    "id": "case-12",
+    "title": "СНИЛС",
+    "text": "СНИЛС в учебной анкете: 112-233-445 95.",
+    "gold": [
+      {
+        "start": 24,
+        "end": 38,
+        "text": "112-233-445 95",
+        "entity_type": "RU_PII"
+      }
+    ],
+    "found": [],
+    "raw_model": {
+      "entities": {
+        "person": [],
+        "location": [],
+        "date of birth": [],
+        "phone number": [],
+        "email address": [],
+        "personal identifier": []
+      }
+    },
+    "masked": "СНИЛС в учебной анкете: 112-233-445 95.",
+    "analyze_ms": 107.5434829981532,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "112-233-445 95",
+          "fully_covered": false,
+          "covered_characters": 0,
+          "characters": 13
+        }
+      ],
+      "fully_covered": 0,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "fastino",
+    "id": "case-13",
+    "title": "Логин и IP",
+    "text": "Логин клиента @demo_customer_714. IP сессии 192.0.2.48.",
+    "gold": [
+      {
+        "start": 14,
+        "end": 32,
+        "text": "@demo_customer_714",
+        "entity_type": "RU_PII"
+      },
+      {
+        "start": 44,
+        "end": 54,
+        "text": "192.0.2.48",
+        "entity_type": "IP_ADDRESS"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "IP_ADDRESS",
+        "start": 44,
+        "end": 54,
+        "score": 0.95,
+        "text": "192.0.2.48",
+        "recognizer": "IpRecognizer",
+        "explanation": {
+          "recognizer": "IpRecognizer",
+          "pattern_name": "IPv4",
+          "pattern": "\\b(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:/(?:[0-2]?\\d|3[0-2]))?\\b",
+          "original_score": 0.6,
+          "score": 0.95,
+          "textual_explanation": "Detected by `IpRecognizer` using pattern `IPv4`",
+          "score_context_improvement": 0.35,
+          "supportive_context_word": "ip",
+          "validation_result": null,
+          "regex_flags": 26
+        }
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "person": [],
+        "location": [],
+        "date of birth": [],
+        "phone number": [],
+        "email address": [],
+        "personal identifier": []
+      }
+    },
+    "masked": "Логин клиента @demo_customer_714. IP сессии <IP_ADDRESS>.",
+    "analyze_ms": 109.4595449976623,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "@demo_customer_714",
+          "fully_covered": false,
+          "covered_characters": 0,
+          "characters": 18
+        },
+        {
+          "text": "192.0.2.48",
+          "fully_covered": true,
+          "covered_characters": 10,
+          "characters": 10
+        }
+      ],
+      "fully_covered": 1,
+      "gold_mentions": 2,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "fastino",
+    "id": "case-14",
+    "title": "Повтор имени",
+    "text": "Марина Соколова оставила почту marina.sokolova@example.com. Позже Марина Соколова подтвердила адрес.",
+    "gold": [
+      {
+        "start": 0,
+        "end": 15,
+        "text": "Марина Соколова",
+        "entity_type": "PERSON"
+      },
+      {
+        "start": 31,
+        "end": 58,
+        "text": "marina.sokolova@example.com",
+        "entity_type": "EMAIL_ADDRESS"
+      },
+      {
+        "start": 66,
+        "end": 81,
+        "text": "Марина Соколова",
+        "entity_type": "PERSON"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PERSON",
+        "start": 0,
+        "end": 15,
+        "score": 0.9986905455589294,
+        "text": "Марина Соколова",
+        "recognizer": "fastino_GLiNER25"
+      },
+      {
+        "entity_type": "EMAIL_ADDRESS",
+        "start": 31,
+        "end": 58,
+        "score": 1.0,
+        "text": "marina.sokolova@example.com",
+        "recognizer": "EmailRecognizer",
+        "explanation": {
+          "recognizer": "EmailRecognizer",
+          "pattern_name": "Email (Medium)",
+          "pattern": "\\b((([!#$%&'*+\\-/=?^_`{|}~\\w])|([!#$%&'*+\\-/=?^_`{|}~\\w][!#$%&'*+\\-/=?^_`{|}~\\.\\w]{0,}[!#$%&'*+\\-/=?^_`{|}~\\w]))[@]\\w+(?:-+\\w+)*(?:\\.\\w+(?:-+\\w+)*)+)\\b",
+          "original_score": 0.5,
+          "score": 1.0,
+          "textual_explanation": "Detected by `EmailRecognizer` using pattern `Email (Medium)`",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": true,
+          "regex_flags": 26
+        }
+      },
+      {
+        "entity_type": "PERSON",
+        "start": 66,
+        "end": 81,
+        "score": 0.9991273283958435,
+        "text": "Марина Соколова",
+        "recognizer": "fastino_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "person": [
+          {
+            "text": "Марина Соколова",
+            "confidence": 0.9991273283958435,
+            "start": 66,
+            "end": 81
+          },
+          {
+            "text": "Марина Соколова",
+            "confidence": 0.9986905455589294,
+            "start": 0,
+            "end": 15
+          }
+        ],
+        "location": [],
+        "date of birth": [],
+        "phone number": [],
+        "email address": [
+          {
+            "text": "marina.sokolova@example.com",
+            "confidence": 0.9933888912200928,
+            "start": 31,
+            "end": 58
+          }
+        ],
+        "personal identifier": []
+      }
+    },
+    "masked": "<PERSON> оставила почту <EMAIL_ADDRESS>. Позже <PERSON> подтвердила адрес.",
+    "analyze_ms": 109.48330099927261,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Марина Соколова",
+          "fully_covered": true,
+          "covered_characters": 14,
+          "characters": 14
+        },
+        {
+          "text": "marina.sokolova@example.com",
+          "fully_covered": true,
+          "covered_characters": 27,
+          "characters": 27
+        },
+        {
+          "text": "Марина Соколова",
+          "fully_covered": true,
+          "covered_characters": 14,
+          "characters": 14
+        }
+      ],
+      "fully_covered": 3,
+      "gold_mentions": 3,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "fastino",
+    "id": "case-15",
+    "title": "Имя с отчеством",
+    "text": "Контактное лицо: Виктор Сергеевич Лебедев, телефон +7 903 555 07 24.",
+    "gold": [
+      {
+        "start": 17,
+        "end": 41,
+        "text": "Виктор Сергеевич Лебедев",
+        "entity_type": "PERSON"
+      },
+      {
+        "start": 51,
+        "end": 67,
+        "text": "+7 903 555 07 24",
+        "entity_type": "PHONE_NUMBER"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PERSON",
+        "start": 17,
+        "end": 41,
+        "score": 0.9967049956321716,
+        "text": "Виктор Сергеевич Лебедев",
+        "recognizer": "fastino_GLiNER25"
+      },
+      {
+        "entity_type": "PHONE_NUMBER",
+        "start": 51,
+        "end": 67,
+        "score": 0.995968222618103,
+        "text": "+7 903 555 07 24",
+        "recognizer": "fastino_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "person": [
+          {
+            "text": "Виктор Сергеевич Лебедев",
+            "confidence": 0.9967049956321716,
+            "start": 17,
+            "end": 41
+          }
+        ],
+        "location": [],
+        "date of birth": [],
+        "phone number": [
+          {
+            "text": "+7 903 555 07 24",
+            "confidence": 0.995968222618103,
+            "start": 51,
+            "end": 67
+          }
+        ],
+        "email address": [],
+        "personal identifier": []
+      }
+    },
+    "masked": "Контактное лицо: <PERSON>, телефон <PHONE_NUMBER>.",
+    "analyze_ms": 113.98792700492777,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Виктор Сергеевич Лебедев",
+          "fully_covered": true,
+          "covered_characters": 22,
+          "characters": 22
+        },
+        {
+          "text": "+7 903 555 07 24",
+          "fully_covered": true,
+          "covered_characters": 12,
+          "characters": 12
+        }
+      ],
+      "fully_covered": 2,
+      "gold_mentions": 2,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "fastino",
+    "id": "case-16",
+    "title": "Смешанный текст",
+    "text": "Customer Anna Petrova просит ответить на anna.petrova@example.com.",
+    "gold": [
+      {
+        "start": 9,
+        "end": 21,
+        "text": "Anna Petrova",
+        "entity_type": "PERSON"
+      },
+      {
+        "start": 41,
+        "end": 65,
+        "text": "anna.petrova@example.com",
+        "entity_type": "EMAIL_ADDRESS"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PERSON",
+        "start": 9,
+        "end": 21,
+        "score": 0.9984958171844482,
+        "text": "Anna Petrova",
+        "recognizer": "fastino_GLiNER25"
+      },
+      {
+        "entity_type": "EMAIL_ADDRESS",
+        "start": 41,
+        "end": 65,
+        "score": 1.0,
+        "text": "anna.petrova@example.com",
+        "recognizer": "EmailRecognizer",
+        "explanation": {
+          "recognizer": "EmailRecognizer",
+          "pattern_name": "Email (Medium)",
+          "pattern": "\\b((([!#$%&'*+\\-/=?^_`{|}~\\w])|([!#$%&'*+\\-/=?^_`{|}~\\w][!#$%&'*+\\-/=?^_`{|}~\\.\\w]{0,}[!#$%&'*+\\-/=?^_`{|}~\\w]))[@]\\w+(?:-+\\w+)*(?:\\.\\w+(?:-+\\w+)*)+)\\b",
+          "original_score": 0.5,
+          "score": 1.0,
+          "textual_explanation": "Detected by `EmailRecognizer` using pattern `Email (Medium)`",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": true,
+          "regex_flags": 26
+        }
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "person": [
+          {
+            "text": "Anna Petrova",
+            "confidence": 0.9984958171844482,
+            "start": 9,
+            "end": 21
+          }
+        ],
+        "location": [],
+        "date of birth": [],
+        "phone number": [],
+        "email address": [
+          {
+            "text": "anna.petrova@example.com",
+            "confidence": 0.9937670230865479,
+            "start": 41,
+            "end": 65
+          }
+        ],
+        "personal identifier": []
+      }
+    },
+    "masked": "Customer <PERSON> просит ответить на <EMAIL_ADDRESS>.",
+    "analyze_ms": 134.95572700048797,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Anna Petrova",
+          "fully_covered": true,
+          "covered_characters": 11,
+          "characters": 11
+        },
+        {
+          "text": "anna.petrova@example.com",
+          "fully_covered": true,
+          "covered_characters": 24,
+          "characters": 24
+        }
+      ],
+      "fully_covered": 2,
+      "gold_mentions": 2,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "fastino",
+    "id": "case-17",
+    "title": "Без PII: задача",
+    "text": "Задача PAY-315 закрыта после проверки. Нужен повторный запуск тестов.",
+    "gold": [],
+    "found": [],
+    "raw_model": {
+      "entities": {
+        "person": [],
+        "location": [],
+        "date of birth": [],
+        "phone number": [],
+        "email address": [],
+        "personal identifier": []
+      }
+    },
+    "masked": "Задача PAY-315 закрыта после проверки. Нужен повторный запуск тестов.",
+    "analyze_ms": 156.52501799922902,
+    "evaluation": {
+      "mentions": [],
+      "fully_covered": 0,
+      "gold_mentions": 0,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "fastino",
+    "id": "case-18",
+    "title": "Без PII: суммы",
+    "text": "В заказе 20 кресел, бюджет 300000 рублей. Уточните срок поставки.",
+    "gold": [],
+    "found": [],
+    "raw_model": {
+      "entities": {
+        "person": [],
+        "location": [],
+        "date of birth": [],
+        "phone number": [],
+        "email address": [],
+        "personal identifier": []
+      }
+    },
+    "masked": "В заказе 20 кресел, бюджет 300000 рублей. Уточните срок поставки.",
+    "analyze_ms": 152.7171960042324,
+    "evaluation": {
+      "mentions": [],
+      "fully_covered": 0,
+      "gold_mentions": 0,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "fastino",
+    "id": "case-19",
+    "title": "Без PII: версия",
+    "text": "Сборка build-20261106.4 прошла тесты, HTTP 200. Ошибок в журнале нет.",
+    "gold": [],
+    "found": [],
+    "raw_model": {
+      "entities": {
+        "person": [],
+        "location": [],
+        "date of birth": [],
+        "phone number": [],
+        "email address": [],
+        "personal identifier": []
+      }
+    },
+    "masked": "Сборка build-20261106.4 прошла тесты, HTTP 200. Ошибок в журнале нет.",
+    "analyze_ms": 126.10092900285963,
+    "evaluation": {
+      "mentions": [],
+      "fully_covered": 0,
+      "gold_mentions": 0,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "fastino",
+    "id": "case-20",
+    "title": "Без PII: обычный текст",
+    "text": "Нужно обновить документацию и проверить инструкцию отката сервиса.",
+    "gold": [],
+    "found": [],
+    "raw_model": {
+      "entities": {
+        "person": [],
+        "location": [],
+        "date of birth": [],
+        "phone number": [],
+        "email address": [],
+        "personal identifier": []
+      }
+    },
+    "masked": "Нужно обновить документацию и проверить инструкцию отката сервиса.",
+    "analyze_ms": 115.21922599058598,
+    "evaluation": {
+      "mentions": [],
+      "fully_covered": 0,
+      "gold_mentions": 0,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "metrika",
+    "id": "case-01",
+    "title": "Имя и почта",
+    "text": "Клиент Марина Соколова просит ответить на marina.sokolova@example.com.",
+    "gold": [
+      {
+        "start": 7,
+        "end": 22,
+        "text": "Марина Соколова",
+        "entity_type": "PERSON"
+      },
+      {
+        "start": 42,
+        "end": 69,
+        "text": "marina.sokolova@example.com",
+        "entity_type": "EMAIL_ADDRESS"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PERSON",
+        "start": 7,
+        "end": 22,
+        "score": 0.9993820190429688,
+        "text": "Марина Соколова",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 7,
+        "end": 22,
+        "score": 0.9998682737350464,
+        "text": "Марина Соколова",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "EMAIL_ADDRESS",
+        "start": 42,
+        "end": 69,
+        "score": 1.0,
+        "text": "marina.sokolova@example.com",
+        "recognizer": "EmailRecognizer",
+        "explanation": {
+          "recognizer": "EmailRecognizer",
+          "pattern_name": "Email (Medium)",
+          "pattern": "\\b((([!#$%&'*+\\-/=?^_`{|}~\\w])|([!#$%&'*+\\-/=?^_`{|}~\\w][!#$%&'*+\\-/=?^_`{|}~\\.\\w]{0,}[!#$%&'*+\\-/=?^_`{|}~\\w]))[@]\\w+(?:-+\\w+)*(?:\\.\\w+(?:-+\\w+)*)+)\\b",
+          "original_score": 0.5,
+          "score": 1.0,
+          "textual_explanation": "Detected by `EmailRecognizer` using pattern `Email (Medium)`",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": true,
+          "regex_flags": 26
+        }
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 42,
+        "end": 69,
+        "score": 0.99986732006073,
+        "text": "marina.sokolova@example.com",
+        "recognizer": "metrika_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "ru_pii_person": [
+          {
+            "text": "Марина Соколова",
+            "confidence": 0.9993820190429688,
+            "start": 7,
+            "end": 22
+          }
+        ],
+        "ru_pii_location": [],
+        "ru_pii_date": [],
+        "ru_pii_phone": [],
+        "ru_pii_email": [
+          {
+            "text": "marina.sokolova@example.com",
+            "confidence": 0.9998986721038818,
+            "start": 42,
+            "end": 69
+          }
+        ],
+        "ru_pii": [
+          {
+            "text": "Марина Соколова",
+            "confidence": 0.9998682737350464,
+            "start": 7,
+            "end": 22
+          },
+          {
+            "text": "marina.sokolova@example.com",
+            "confidence": 0.99986732006073,
+            "start": 42,
+            "end": 69
+          }
+        ]
+      }
+    },
+    "masked": "Клиент <PERSON> просит ответить на <EMAIL_ADDRESS>.",
+    "analyze_ms": 119.7004889982054,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Марина Соколова",
+          "fully_covered": true,
+          "covered_characters": 14,
+          "characters": 14
+        },
+        {
+          "text": "marina.sokolova@example.com",
+          "fully_covered": true,
+          "covered_characters": 27,
+          "characters": 27
+        }
+      ],
+      "fully_covered": 2,
+      "gold_mentions": 2,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "metrika",
+    "id": "case-02",
+    "title": "Имя в падеже",
+    "text": "Передайте договор Андрею Кузнецову после согласования.",
+    "gold": [
+      {
+        "start": 18,
+        "end": 34,
+        "text": "Андрею Кузнецову",
+        "entity_type": "PERSON"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PERSON",
+        "start": 18,
+        "end": 34,
+        "score": 0.9990863800048828,
+        "text": "Андрею Кузнецову",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 18,
+        "end": 34,
+        "score": 0.9997574687004089,
+        "text": "Андрею Кузнецову",
+        "recognizer": "metrika_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "ru_pii_person": [
+          {
+            "text": "Андрею Кузнецову",
+            "confidence": 0.9990863800048828,
+            "start": 18,
+            "end": 34
+          }
+        ],
+        "ru_pii_location": [],
+        "ru_pii_date": [],
+        "ru_pii_phone": [],
+        "ru_pii_email": [],
+        "ru_pii": [
+          {
+            "text": "Андрею Кузнецову",
+            "confidence": 0.9997574687004089,
+            "start": 18,
+            "end": 34
+          }
+        ]
+      }
+    },
+    "masked": "Передайте договор <PERSON> после согласования.",
+    "analyze_ms": 114.58132600819226,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Андрею Кузнецову",
+          "fully_covered": true,
+          "covered_characters": 15,
+          "characters": 15
+        }
+      ],
+      "fully_covered": 1,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "metrika",
+    "id": "case-03",
+    "title": "Двойная фамилия",
+    "text": "Заявку оформила Елена Орлова-Соколова.",
+    "gold": [
+      {
+        "start": 16,
+        "end": 37,
+        "text": "Елена Орлова-Соколова",
+        "entity_type": "PERSON"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PERSON",
+        "start": 16,
+        "end": 37,
+        "score": 0.9996906518936157,
+        "text": "Елена Орлова-Соколова",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 16,
+        "end": 37,
+        "score": 0.999883770942688,
+        "text": "Елена Орлова-Соколова",
+        "recognizer": "metrika_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "ru_pii_person": [
+          {
+            "text": "Елена Орлова-Соколова",
+            "confidence": 0.9996906518936157,
+            "start": 16,
+            "end": 37
+          }
+        ],
+        "ru_pii_location": [],
+        "ru_pii_date": [],
+        "ru_pii_phone": [],
+        "ru_pii_email": [],
+        "ru_pii": [
+          {
+            "text": "Елена Орлова-Соколова",
+            "confidence": 0.999883770942688,
+            "start": 16,
+            "end": 37
+          }
+        ]
+      }
+    },
+    "masked": "Заявку оформила <PERSON>.",
+    "analyze_ms": 119.63117700361181,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Елена Орлова-Соколова",
+          "fully_covered": true,
+          "covered_characters": 20,
+          "characters": 20
+        }
+      ],
+      "fully_covered": 1,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "metrika",
+    "id": "case-04",
+    "title": "Два участника",
+    "text": "Олег Миронов передал обращение Татьяне Волковой.",
+    "gold": [
+      {
+        "start": 0,
+        "end": 12,
+        "text": "Олег Миронов",
+        "entity_type": "PERSON"
+      },
+      {
+        "start": 31,
+        "end": 47,
+        "text": "Татьяне Волковой",
+        "entity_type": "PERSON"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PERSON",
+        "start": 0,
+        "end": 12,
+        "score": 0.9997078776359558,
+        "text": "Олег Миронов",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 0,
+        "end": 12,
+        "score": 0.9999270439147949,
+        "text": "Олег Миронов",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "PERSON",
+        "start": 31,
+        "end": 47,
+        "score": 0.9994173049926758,
+        "text": "Татьяне Волковой",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 31,
+        "end": 47,
+        "score": 0.9998050332069397,
+        "text": "Татьяне Волковой",
+        "recognizer": "metrika_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "ru_pii_person": [
+          {
+            "text": "Олег Миронов",
+            "confidence": 0.9997078776359558,
+            "start": 0,
+            "end": 12
+          },
+          {
+            "text": "Татьяне Волковой",
+            "confidence": 0.9994173049926758,
+            "start": 31,
+            "end": 47
+          }
+        ],
+        "ru_pii_location": [],
+        "ru_pii_date": [],
+        "ru_pii_phone": [],
+        "ru_pii_email": [],
+        "ru_pii": [
+          {
+            "text": "Олег Миронов",
+            "confidence": 0.9999270439147949,
+            "start": 0,
+            "end": 12
+          },
+          {
+            "text": "Татьяне Волковой",
+            "confidence": 0.9998050332069397,
+            "start": 31,
+            "end": 47
+          }
+        ]
+      }
+    },
+    "masked": "<PERSON> передал обращение <PERSON>.",
+    "analyze_ms": 138.44065900775604,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Олег Миронов",
+          "fully_covered": true,
+          "covered_characters": 11,
+          "characters": 11
+        },
+        {
+          "text": "Татьяне Волковой",
+          "fully_covered": true,
+          "covered_characters": 15,
+          "characters": 15
+        }
+      ],
+      "fully_covered": 2,
+      "gold_mentions": 2,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "metrika",
+    "id": "case-05",
+    "title": "Почта с alias",
+    "text": "Ответ отправьте на qa.person+case17@example.org и copy.person@example.net.",
+    "gold": [
+      {
+        "start": 19,
+        "end": 47,
+        "text": "qa.person+case17@example.org",
+        "entity_type": "EMAIL_ADDRESS"
+      },
+      {
+        "start": 50,
+        "end": 73,
+        "text": "copy.person@example.net",
+        "entity_type": "EMAIL_ADDRESS"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "EMAIL_ADDRESS",
+        "start": 19,
+        "end": 47,
+        "score": 1.0,
+        "text": "qa.person+case17@example.org",
+        "recognizer": "EmailRecognizer",
+        "explanation": {
+          "recognizer": "EmailRecognizer",
+          "pattern_name": "Email (Medium)",
+          "pattern": "\\b((([!#$%&'*+\\-/=?^_`{|}~\\w])|([!#$%&'*+\\-/=?^_`{|}~\\w][!#$%&'*+\\-/=?^_`{|}~\\.\\w]{0,}[!#$%&'*+\\-/=?^_`{|}~\\w]))[@]\\w+(?:-+\\w+)*(?:\\.\\w+(?:-+\\w+)*)+)\\b",
+          "original_score": 0.5,
+          "score": 1.0,
+          "textual_explanation": "Detected by `EmailRecognizer` using pattern `Email (Medium)`",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": true,
+          "regex_flags": 26
+        }
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 19,
+        "end": 47,
+        "score": 0.7694891095161438,
+        "text": "qa.person+case17@example.org",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "EMAIL_ADDRESS",
+        "start": 50,
+        "end": 73,
+        "score": 1.0,
+        "text": "copy.person@example.net",
+        "recognizer": "EmailRecognizer",
+        "explanation": {
+          "recognizer": "EmailRecognizer",
+          "pattern_name": "Email (Medium)",
+          "pattern": "\\b((([!#$%&'*+\\-/=?^_`{|}~\\w])|([!#$%&'*+\\-/=?^_`{|}~\\w][!#$%&'*+\\-/=?^_`{|}~\\.\\w]{0,}[!#$%&'*+\\-/=?^_`{|}~\\w]))[@]\\w+(?:-+\\w+)*(?:\\.\\w+(?:-+\\w+)*)+)\\b",
+          "original_score": 0.5,
+          "score": 1.0,
+          "textual_explanation": "Detected by `EmailRecognizer` using pattern `Email (Medium)`",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": true,
+          "regex_flags": 26
+        }
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 50,
+        "end": 73,
+        "score": 0.7728254795074463,
+        "text": "copy.person@example.net",
+        "recognizer": "metrika_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "ru_pii_person": [],
+        "ru_pii_location": [],
+        "ru_pii_date": [],
+        "ru_pii_phone": [],
+        "ru_pii_email": [
+          {
+            "text": "qa.person+case17@example.org",
+            "confidence": 0.8468663096427917,
+            "start": 19,
+            "end": 47
+          },
+          {
+            "text": "copy.person@example.net",
+            "confidence": 0.790153980255127,
+            "start": 50,
+            "end": 73
+          }
+        ],
+        "ru_pii": [
+          {
+            "text": "copy.person@example.net",
+            "confidence": 0.7728254795074463,
+            "start": 50,
+            "end": 73
+          },
+          {
+            "text": "qa.person+case17@example.org",
+            "confidence": 0.7694891095161438,
+            "start": 19,
+            "end": 47
+          }
+        ]
+      }
+    },
+    "masked": "Ответ отправьте на <EMAIL_ADDRESS> и <EMAIL_ADDRESS>.",
+    "analyze_ms": 141.66819999809377,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "qa.person+case17@example.org",
+          "fully_covered": true,
+          "covered_characters": 28,
+          "characters": 28
+        },
+        {
+          "text": "copy.person@example.net",
+          "fully_covered": true,
+          "covered_characters": 23,
+          "characters": 23
+        }
+      ],
+      "fully_covered": 2,
+      "gold_mentions": 2,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "metrika",
+    "id": "case-06",
+    "title": "Телефон с форматированием",
+    "text": "Телефон клиента: +7 (916) 555-01-42.",
+    "gold": [
+      {
+        "start": 17,
+        "end": 35,
+        "text": "+7 (916) 555-01-42",
+        "entity_type": "PHONE_NUMBER"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PHONE_NUMBER",
+        "start": 17,
+        "end": 35,
+        "score": 0.997238278388977,
+        "text": "+7 (916) 555-01-42",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 17,
+        "end": 35,
+        "score": 0.999488115310669,
+        "text": "+7 (916) 555-01-42",
+        "recognizer": "metrika_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "ru_pii_person": [],
+        "ru_pii_location": [],
+        "ru_pii_date": [],
+        "ru_pii_phone": [
+          {
+            "text": "+7 (916) 555-01-42",
+            "confidence": 0.997238278388977,
+            "start": 17,
+            "end": 35
+          }
+        ],
+        "ru_pii_email": [],
+        "ru_pii": [
+          {
+            "text": "+7 (916) 555-01-42",
+            "confidence": 0.999488115310669,
+            "start": 17,
+            "end": 35
+          }
+        ]
+      }
+    },
+    "masked": "Телефон клиента: <PHONE_NUMBER>.",
+    "analyze_ms": 151.5666760096792,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "+7 (916) 555-01-42",
+          "fully_covered": true,
+          "covered_characters": 16,
+          "characters": 16
+        }
+      ],
+      "fully_covered": 1,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "metrika",
+    "id": "case-07",
+    "title": "Телефон в нескольких строках",
+    "text": "Контакт для связи:\n+7 921 555 03 18\nПозвонить после согласования.",
+    "gold": [
+      {
+        "start": 19,
+        "end": 35,
+        "text": "+7 921 555 03 18",
+        "entity_type": "PHONE_NUMBER"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PHONE_NUMBER",
+        "start": 19,
+        "end": 35,
+        "score": 0.9983077049255371,
+        "text": "+7 921 555 03 18",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 19,
+        "end": 35,
+        "score": 0.9995982050895691,
+        "text": "+7 921 555 03 18",
+        "recognizer": "metrika_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "ru_pii_person": [],
+        "ru_pii_location": [],
+        "ru_pii_date": [],
+        "ru_pii_phone": [
+          {
+            "text": "+7 921 555 03 18",
+            "confidence": 0.9983077049255371,
+            "start": 19,
+            "end": 35
+          }
+        ],
+        "ru_pii_email": [],
+        "ru_pii": [
+          {
+            "text": "+7 921 555 03 18",
+            "confidence": 0.9995982050895691,
+            "start": 19,
+            "end": 35
+          }
+        ]
+      }
+    },
+    "masked": "Контакт для связи:\n<PHONE_NUMBER>\nПозвонить после согласования.",
+    "analyze_ms": 147.61099399765953,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "+7 921 555 03 18",
+          "fully_covered": true,
+          "covered_characters": 12,
+          "characters": 12
+        }
+      ],
+      "fully_covered": 1,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "metrika",
+    "id": "case-08",
+    "title": "Полный адрес",
+    "text": "Адрес доставки: г. Тверь, ул. Лесная, д. 14, кв. 23.",
+    "gold": [
+      {
+        "start": 16,
+        "end": 51,
+        "text": "г. Тверь, ул. Лесная, д. 14, кв. 23",
+        "entity_type": "LOCATION"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "LOCATION",
+        "start": 16,
+        "end": 51,
+        "score": 0.990632176399231,
+        "text": "г. Тверь, ул. Лесная, д. 14, кв. 23",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 16,
+        "end": 51,
+        "score": 0.995461642742157,
+        "text": "г. Тверь, ул. Лесная, д. 14, кв. 23",
+        "recognizer": "metrika_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "ru_pii_person": [],
+        "ru_pii_location": [
+          {
+            "text": "г. Тверь, ул. Лесная, д. 14, кв. 23",
+            "confidence": 0.990632176399231,
+            "start": 16,
+            "end": 51
+          }
+        ],
+        "ru_pii_date": [],
+        "ru_pii_phone": [],
+        "ru_pii_email": [],
+        "ru_pii": [
+          {
+            "text": "г. Тверь, ул. Лесная, д. 14, кв. 23",
+            "confidence": 0.995461642742157,
+            "start": 16,
+            "end": 51
+          }
+        ]
+      }
+    },
+    "masked": "Адрес доставки: <LOCATION>.",
+    "analyze_ms": 159.88656799891032,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "г. Тверь, ул. Лесная, д. 14, кв. 23",
+          "fully_covered": true,
+          "covered_characters": 28,
+          "characters": 28
+        }
+      ],
+      "fully_covered": 1,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "metrika",
+    "id": "case-09",
+    "title": "Адрес без индекса",
+    "text": "Клиент живет по адресу: Казань, улица Полевая, дом 8, квартира 17.",
+    "gold": [
+      {
+        "start": 24,
+        "end": 65,
+        "text": "Казань, улица Полевая, дом 8, квартира 17",
+        "entity_type": "LOCATION"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "LOCATION",
+        "start": 24,
+        "end": 65,
+        "score": 0.9776200652122498,
+        "text": "Казань, улица Полевая, дом 8, квартира 17",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 24,
+        "end": 65,
+        "score": 0.9880030155181885,
+        "text": "Казань, улица Полевая, дом 8, квартира 17",
+        "recognizer": "metrika_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "ru_pii_person": [],
+        "ru_pii_location": [
+          {
+            "text": "Казань, улица Полевая, дом 8, квартира 17",
+            "confidence": 0.9776200652122498,
+            "start": 24,
+            "end": 65
+          }
+        ],
+        "ru_pii_date": [],
+        "ru_pii_phone": [],
+        "ru_pii_email": [],
+        "ru_pii": [
+          {
+            "text": "Казань, улица Полевая, дом 8, квартира 17",
+            "confidence": 0.9880030155181885,
+            "start": 24,
+            "end": 65
+          }
+        ]
+      }
+    },
+    "masked": "Клиент живет по адресу: <LOCATION>.",
+    "analyze_ms": 151.12836699699983,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Казань, улица Полевая, дом 8, квартира 17",
+          "fully_covered": true,
+          "covered_characters": 35,
+          "characters": 35
+        }
+      ],
+      "fully_covered": 1,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "metrika",
+    "id": "case-10",
+    "title": "Дата рождения",
+    "text": "В анкете указана дата рождения: 17.08.1986.",
+    "gold": [
+      {
+        "start": 32,
+        "end": 42,
+        "text": "17.08.1986",
+        "entity_type": "DATE_TIME"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "DATE_TIME",
+        "start": 32,
+        "end": 42,
+        "score": 0.9998098015785217,
+        "text": "17.08.1986",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 32,
+        "end": 42,
+        "score": 0.9999120235443115,
+        "text": "17.08.1986",
+        "recognizer": "metrika_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "ru_pii_person": [],
+        "ru_pii_location": [],
+        "ru_pii_date": [
+          {
+            "text": "17.08.1986",
+            "confidence": 0.9998098015785217,
+            "start": 32,
+            "end": 42
+          }
+        ],
+        "ru_pii_phone": [],
+        "ru_pii_email": [],
+        "ru_pii": [
+          {
+            "text": "17.08.1986",
+            "confidence": 0.9999120235443115,
+            "start": 32,
+            "end": 42
+          }
+        ]
+      }
+    },
+    "masked": "В анкете указана дата рождения: <DATE_TIME>.",
+    "analyze_ms": 260.205231999862,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "17.08.1986",
+          "fully_covered": true,
+          "covered_characters": 10,
+          "characters": 10
+        }
+      ],
+      "fully_covered": 1,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "metrika",
+    "id": "case-11",
+    "title": "Паспорт",
+    "text": "Паспорт клиента: серия 4512, номер 654321.",
+    "gold": [
+      {
+        "start": 23,
+        "end": 27,
+        "text": "4512",
+        "entity_type": "RU_PII"
+      },
+      {
+        "start": 35,
+        "end": 41,
+        "text": "654321",
+        "entity_type": "RU_PII"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "RU_PII",
+        "start": 23,
+        "end": 27,
+        "score": 0.9997759461402893,
+        "text": "4512",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 35,
+        "end": 41,
+        "score": 0.999871015548706,
+        "text": "654321",
+        "recognizer": "metrika_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "ru_pii_person": [],
+        "ru_pii_location": [],
+        "ru_pii_date": [],
+        "ru_pii_phone": [],
+        "ru_pii_email": [],
+        "ru_pii": [
+          {
+            "text": "654321",
+            "confidence": 0.999871015548706,
+            "start": 35,
+            "end": 41
+          },
+          {
+            "text": "4512",
+            "confidence": 0.9997759461402893,
+            "start": 23,
+            "end": 27
+          }
+        ]
+      }
+    },
+    "masked": "Паспорт клиента: серия <RU_PII>, номер <RU_PII>.",
+    "analyze_ms": 135.74002700624987,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "4512",
+          "fully_covered": true,
+          "covered_characters": 4,
+          "characters": 4
+        },
+        {
+          "text": "654321",
+          "fully_covered": true,
+          "covered_characters": 6,
+          "characters": 6
+        }
+      ],
+      "fully_covered": 2,
+      "gold_mentions": 2,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "metrika",
+    "id": "case-12",
+    "title": "СНИЛС",
+    "text": "СНИЛС в учебной анкете: 112-233-445 95.",
+    "gold": [
+      {
+        "start": 24,
+        "end": 38,
+        "text": "112-233-445 95",
+        "entity_type": "RU_PII"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "RU_PII",
+        "start": 24,
+        "end": 38,
+        "score": 0.999843955039978,
+        "text": "112-233-445 95",
+        "recognizer": "metrika_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "ru_pii_person": [],
+        "ru_pii_location": [],
+        "ru_pii_date": [],
+        "ru_pii_phone": [],
+        "ru_pii_email": [],
+        "ru_pii": [
+          {
+            "text": "112-233-445 95",
+            "confidence": 0.999843955039978,
+            "start": 24,
+            "end": 38
+          }
+        ]
+      }
+    },
+    "masked": "СНИЛС в учебной анкете: <RU_PII>.",
+    "analyze_ms": 132.6840420078952,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "112-233-445 95",
+          "fully_covered": true,
+          "covered_characters": 13,
+          "characters": 13
+        }
+      ],
+      "fully_covered": 1,
+      "gold_mentions": 1,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "metrika",
+    "id": "case-13",
+    "title": "Логин и IP",
+    "text": "Логин клиента @demo_customer_714. IP сессии 192.0.2.48.",
+    "gold": [
+      {
+        "start": 14,
+        "end": 32,
+        "text": "@demo_customer_714",
+        "entity_type": "RU_PII"
+      },
+      {
+        "start": 44,
+        "end": 54,
+        "text": "192.0.2.48",
+        "entity_type": "IP_ADDRESS"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "RU_PII",
+        "start": 14,
+        "end": 32,
+        "score": 0.9963879585266113,
+        "text": "@demo_customer_714",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "IP_ADDRESS",
+        "start": 44,
+        "end": 54,
+        "score": 0.95,
+        "text": "192.0.2.48",
+        "recognizer": "IpRecognizer",
+        "explanation": {
+          "recognizer": "IpRecognizer",
+          "pattern_name": "IPv4",
+          "pattern": "\\b(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:/(?:[0-2]?\\d|3[0-2]))?\\b",
+          "original_score": 0.6,
+          "score": 0.95,
+          "textual_explanation": "Detected by `IpRecognizer` using pattern `IPv4`",
+          "score_context_improvement": 0.35,
+          "supportive_context_word": "ip",
+          "validation_result": null,
+          "regex_flags": 26
+        }
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 44,
+        "end": 54,
+        "score": 0.8900213837623596,
+        "text": "192.0.2.48",
+        "recognizer": "metrika_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "ru_pii_person": [],
+        "ru_pii_location": [],
+        "ru_pii_date": [],
+        "ru_pii_phone": [],
+        "ru_pii_email": [],
+        "ru_pii": [
+          {
+            "text": "@demo_customer_714",
+            "confidence": 0.9963879585266113,
+            "start": 14,
+            "end": 32
+          },
+          {
+            "text": "192.0.2.48",
+            "confidence": 0.8900213837623596,
+            "start": 44,
+            "end": 54
+          }
+        ]
+      }
+    },
+    "masked": "Логин клиента <RU_PII>. IP сессии <IP_ADDRESS>.",
+    "analyze_ms": 152.5531859952025,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "@demo_customer_714",
+          "fully_covered": true,
+          "covered_characters": 18,
+          "characters": 18
+        },
+        {
+          "text": "192.0.2.48",
+          "fully_covered": true,
+          "covered_characters": 10,
+          "characters": 10
+        }
+      ],
+      "fully_covered": 2,
+      "gold_mentions": 2,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "metrika",
+    "id": "case-14",
+    "title": "Повтор имени",
+    "text": "Марина Соколова оставила почту marina.sokolova@example.com. Позже Марина Соколова подтвердила адрес.",
+    "gold": [
+      {
+        "start": 0,
+        "end": 15,
+        "text": "Марина Соколова",
+        "entity_type": "PERSON"
+      },
+      {
+        "start": 31,
+        "end": 58,
+        "text": "marina.sokolova@example.com",
+        "entity_type": "EMAIL_ADDRESS"
+      },
+      {
+        "start": 66,
+        "end": 81,
+        "text": "Марина Соколова",
+        "entity_type": "PERSON"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PERSON",
+        "start": 0,
+        "end": 15,
+        "score": 0.9996638298034668,
+        "text": "Марина Соколова",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 0,
+        "end": 15,
+        "score": 0.9999145269393921,
+        "text": "Марина Соколова",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "EMAIL_ADDRESS",
+        "start": 31,
+        "end": 58,
+        "score": 1.0,
+        "text": "marina.sokolova@example.com",
+        "recognizer": "EmailRecognizer",
+        "explanation": {
+          "recognizer": "EmailRecognizer",
+          "pattern_name": "Email (Medium)",
+          "pattern": "\\b((([!#$%&'*+\\-/=?^_`{|}~\\w])|([!#$%&'*+\\-/=?^_`{|}~\\w][!#$%&'*+\\-/=?^_`{|}~\\.\\w]{0,}[!#$%&'*+\\-/=?^_`{|}~\\w]))[@]\\w+(?:-+\\w+)*(?:\\.\\w+(?:-+\\w+)*)+)\\b",
+          "original_score": 0.5,
+          "score": 1.0,
+          "textual_explanation": "Detected by `EmailRecognizer` using pattern `Email (Medium)`",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": true,
+          "regex_flags": 26
+        }
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 31,
+        "end": 58,
+        "score": 0.9999436140060425,
+        "text": "marina.sokolova@example.com",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "PERSON",
+        "start": 66,
+        "end": 81,
+        "score": 0.999890923500061,
+        "text": "Марина Соколова",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 66,
+        "end": 81,
+        "score": 0.9999656677246094,
+        "text": "Марина Соколова",
+        "recognizer": "metrika_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "ru_pii_person": [
+          {
+            "text": "Марина Соколова",
+            "confidence": 0.999890923500061,
+            "start": 66,
+            "end": 81
+          },
+          {
+            "text": "Марина Соколова",
+            "confidence": 0.9996638298034668,
+            "start": 0,
+            "end": 15
+          }
+        ],
+        "ru_pii_location": [],
+        "ru_pii_date": [],
+        "ru_pii_phone": [],
+        "ru_pii_email": [
+          {
+            "text": "marina.sokolova@example.com",
+            "confidence": 0.9999372959136963,
+            "start": 31,
+            "end": 58
+          }
+        ],
+        "ru_pii": [
+          {
+            "text": "Марина Соколова",
+            "confidence": 0.9999656677246094,
+            "start": 66,
+            "end": 81
+          },
+          {
+            "text": "marina.sokolova@example.com",
+            "confidence": 0.9999436140060425,
+            "start": 31,
+            "end": 58
+          },
+          {
+            "text": "Марина Соколова",
+            "confidence": 0.9999145269393921,
+            "start": 0,
+            "end": 15
+          }
+        ]
+      }
+    },
+    "masked": "<PERSON> оставила почту <EMAIL_ADDRESS>. Позже <PERSON> подтвердила адрес.",
+    "analyze_ms": 153.99400499882177,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Марина Соколова",
+          "fully_covered": true,
+          "covered_characters": 14,
+          "characters": 14
+        },
+        {
+          "text": "marina.sokolova@example.com",
+          "fully_covered": true,
+          "covered_characters": 27,
+          "characters": 27
+        },
+        {
+          "text": "Марина Соколова",
+          "fully_covered": true,
+          "covered_characters": 14,
+          "characters": 14
+        }
+      ],
+      "fully_covered": 3,
+      "gold_mentions": 3,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "metrika",
+    "id": "case-15",
+    "title": "Имя с отчеством",
+    "text": "Контактное лицо: Виктор Сергеевич Лебедев, телефон +7 903 555 07 24.",
+    "gold": [
+      {
+        "start": 17,
+        "end": 41,
+        "text": "Виктор Сергеевич Лебедев",
+        "entity_type": "PERSON"
+      },
+      {
+        "start": 51,
+        "end": 67,
+        "text": "+7 903 555 07 24",
+        "entity_type": "PHONE_NUMBER"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PERSON",
+        "start": 17,
+        "end": 41,
+        "score": 0.9949191212654114,
+        "text": "Виктор Сергеевич Лебедев",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 17,
+        "end": 41,
+        "score": 0.9980802536010742,
+        "text": "Виктор Сергеевич Лебедев",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "PHONE_NUMBER",
+        "start": 51,
+        "end": 67,
+        "score": 0.9981087446212769,
+        "text": "+7 903 555 07 24",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 51,
+        "end": 67,
+        "score": 0.9992200136184692,
+        "text": "+7 903 555 07 24",
+        "recognizer": "metrika_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "ru_pii_person": [
+          {
+            "text": "Виктор Сергеевич Лебедев",
+            "confidence": 0.9949191212654114,
+            "start": 17,
+            "end": 41
+          }
+        ],
+        "ru_pii_location": [],
+        "ru_pii_date": [],
+        "ru_pii_phone": [
+          {
+            "text": "+7 903 555 07 24",
+            "confidence": 0.9981087446212769,
+            "start": 51,
+            "end": 67
+          }
+        ],
+        "ru_pii_email": [],
+        "ru_pii": [
+          {
+            "text": "+7 903 555 07 24",
+            "confidence": 0.9992200136184692,
+            "start": 51,
+            "end": 67
+          },
+          {
+            "text": "Виктор Сергеевич Лебедев",
+            "confidence": 0.9980802536010742,
+            "start": 17,
+            "end": 41
+          }
+        ]
+      }
+    },
+    "masked": "Контактное лицо: <PERSON>, телефон <PHONE_NUMBER>.",
+    "analyze_ms": 169.17247899982613,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Виктор Сергеевич Лебедев",
+          "fully_covered": true,
+          "covered_characters": 22,
+          "characters": 22
+        },
+        {
+          "text": "+7 903 555 07 24",
+          "fully_covered": true,
+          "covered_characters": 12,
+          "characters": 12
+        }
+      ],
+      "fully_covered": 2,
+      "gold_mentions": 2,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "metrika",
+    "id": "case-16",
+    "title": "Смешанный текст",
+    "text": "Customer Anna Petrova просит ответить на anna.petrova@example.com.",
+    "gold": [
+      {
+        "start": 9,
+        "end": 21,
+        "text": "Anna Petrova",
+        "entity_type": "PERSON"
+      },
+      {
+        "start": 41,
+        "end": 65,
+        "text": "anna.petrova@example.com",
+        "entity_type": "EMAIL_ADDRESS"
+      }
+    ],
+    "found": [
+      {
+        "entity_type": "PERSON",
+        "start": 9,
+        "end": 21,
+        "score": 0.9988685846328735,
+        "text": "Anna Petrova",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 9,
+        "end": 21,
+        "score": 0.9999148845672607,
+        "text": "Anna Petrova",
+        "recognizer": "metrika_GLiNER25"
+      },
+      {
+        "entity_type": "EMAIL_ADDRESS",
+        "start": 41,
+        "end": 65,
+        "score": 1.0,
+        "text": "anna.petrova@example.com",
+        "recognizer": "EmailRecognizer",
+        "explanation": {
+          "recognizer": "EmailRecognizer",
+          "pattern_name": "Email (Medium)",
+          "pattern": "\\b((([!#$%&'*+\\-/=?^_`{|}~\\w])|([!#$%&'*+\\-/=?^_`{|}~\\w][!#$%&'*+\\-/=?^_`{|}~\\.\\w]{0,}[!#$%&'*+\\-/=?^_`{|}~\\w]))[@]\\w+(?:-+\\w+)*(?:\\.\\w+(?:-+\\w+)*)+)\\b",
+          "original_score": 0.5,
+          "score": 1.0,
+          "textual_explanation": "Detected by `EmailRecognizer` using pattern `Email (Medium)`",
+          "score_context_improvement": 0,
+          "supportive_context_word": "",
+          "validation_result": true,
+          "regex_flags": 26
+        }
+      },
+      {
+        "entity_type": "RU_PII",
+        "start": 41,
+        "end": 65,
+        "score": 0.9998749494552612,
+        "text": "anna.petrova@example.com",
+        "recognizer": "metrika_GLiNER25"
+      }
+    ],
+    "raw_model": {
+      "entities": {
+        "ru_pii_person": [
+          {
+            "text": "Anna Petrova",
+            "confidence": 0.9988685846328735,
+            "start": 9,
+            "end": 21
+          }
+        ],
+        "ru_pii_location": [],
+        "ru_pii_date": [],
+        "ru_pii_phone": [],
+        "ru_pii_email": [
+          {
+            "text": "anna.petrova@example.com",
+            "confidence": 0.999923586845398,
+            "start": 41,
+            "end": 65
+          }
+        ],
+        "ru_pii": [
+          {
+            "text": "Anna Petrova",
+            "confidence": 0.9999148845672607,
+            "start": 9,
+            "end": 21
+          },
+          {
+            "text": "anna.petrova@example.com",
+            "confidence": 0.9998749494552612,
+            "start": 41,
+            "end": 65
+          }
+        ]
+      }
+    },
+    "masked": "Customer <PERSON> просит ответить на <EMAIL_ADDRESS>.",
+    "analyze_ms": 143.25872100016568,
+    "evaluation": {
+      "mentions": [
+        {
+          "text": "Anna Petrova",
+          "fully_covered": true,
+          "covered_characters": 11,
+          "characters": 11
+        },
+        {
+          "text": "anna.petrova@example.com",
+          "fully_covered": true,
+          "covered_characters": 24,
+          "characters": 24
+        }
+      ],
+      "fully_covered": 2,
+      "gold_mentions": 2,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "metrika",
+    "id": "case-17",
+    "title": "Без PII: задача",
+    "text": "Задача PAY-315 закрыта после проверки. Нужен повторный запуск тестов.",
+    "gold": [],
+    "found": [],
+    "raw_model": {
+      "entities": {
+        "ru_pii_person": [],
+        "ru_pii_location": [],
+        "ru_pii_date": [],
+        "ru_pii_phone": [],
+        "ru_pii_email": [],
+        "ru_pii": []
+      }
+    },
+    "masked": "Задача PAY-315 закрыта после проверки. Нужен повторный запуск тестов.",
+    "analyze_ms": 147.4235579953529,
+    "evaluation": {
+      "mentions": [],
+      "fully_covered": 0,
+      "gold_mentions": 0,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "metrika",
+    "id": "case-18",
+    "title": "Без PII: суммы",
+    "text": "В заказе 20 кресел, бюджет 300000 рублей. Уточните срок поставки.",
+    "gold": [],
+    "found": [],
+    "raw_model": {
+      "entities": {
+        "ru_pii_person": [],
+        "ru_pii_location": [],
+        "ru_pii_date": [],
+        "ru_pii_phone": [],
+        "ru_pii_email": [],
+        "ru_pii": []
+      }
+    },
+    "masked": "В заказе 20 кресел, бюджет 300000 рублей. Уточните срок поставки.",
+    "analyze_ms": 147.6586189965019,
+    "evaluation": {
+      "mentions": [],
+      "fully_covered": 0,
+      "gold_mentions": 0,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "metrika",
+    "id": "case-19",
+    "title": "Без PII: версия",
+    "text": "Сборка build-20261106.4 прошла тесты, HTTP 200. Ошибок в журнале нет.",
+    "gold": [],
+    "found": [],
+    "raw_model": {
+      "entities": {
+        "ru_pii_person": [],
+        "ru_pii_location": [],
+        "ru_pii_date": [],
+        "ru_pii_phone": [],
+        "ru_pii_email": [],
+        "ru_pii": []
+      }
+    },
+    "masked": "Сборка build-20261106.4 прошла тесты, HTTP 200. Ошибок в журнале нет.",
+    "analyze_ms": 152.04502799315378,
+    "evaluation": {
+      "mentions": [],
+      "fully_covered": 0,
+      "gold_mentions": 0,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  },
+  {
+    "config": "metrika",
+    "id": "case-20",
+    "title": "Без PII: обычный текст",
+    "text": "Нужно обновить документацию и проверить инструкцию отката сервиса.",
+    "gold": [],
+    "found": [],
+    "raw_model": {
+      "entities": {
+        "ru_pii_person": [],
+        "ru_pii_location": [],
+        "ru_pii_date": [],
+        "ru_pii_phone": [],
+        "ru_pii_email": [],
+        "ru_pii": []
+      }
+    },
+    "masked": "Нужно обновить документацию и проверить инструкцию отката сервиса.",
+    "analyze_ms": 145.98498000123072,
+    "evaluation": {
+      "mentions": [],
+      "fully_covered": 0,
+      "gold_mentions": 0,
+      "extra_characters": 0,
+      "negative_with_finding": false
+    }
+  }
+]

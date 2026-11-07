@@ -1,0 +1,106 @@
+{
+  "citation_checks": [
+    {
+      "task_id": "PAY-241",
+      "comment_id": null,
+      "exists": false,
+      "exact_quote": false
+    },
+    {
+      "task_id": "PAY-241",
+      "comment_id": "PAY-C2",
+      "exists": true,
+      "exact_quote": true
+    },
+    {
+      "task_id": "PAY-241",
+      "comment_id": "PAY-C3",
+      "exists": true,
+      "exact_quote": true
+    },
+    {
+      "task_id": "REL-242",
+      "comment_id": null,
+      "exists": false,
+      "exact_quote": false
+    },
+    {
+      "task_id": "REL-242",
+      "comment_id": "REL-C1",
+      "exists": true,
+      "exact_quote": true
+    },
+    {
+      "task_id": "REL-242",
+      "comment_id": "REL-C2",
+      "exists": true,
+      "exact_quote": true
+    },
+    {
+      "task_id": "SEC-243",
+      "comment_id": null,
+      "exists": false,
+      "exact_quote": false
+    },
+    {
+      "task_id": "SEC-243",
+      "comment_id": "SEC-C2",
+      "exists": true,
+      "exact_quote": true
+    },
+    {
+      "task_id": "SEC-243",
+      "comment_id": "SEC-C3",
+      "exists": true,
+      "exact_quote": true
+    },
+    {
+      "task_id": "SEC-243",
+      "comment_id": "SEC-C1",
+      "exists": true,
+      "exact_quote": true
+    },
+    {
+      "task_id": "SEC-243",
+      "comment_id": "SEC-C1",
+      "exists": true,
+      "exact_quote": true
+    },
+    {
+      "task_id": "PAY-241",
+      "comment_id": "PAY-C1",
+      "exists": true,
+      "exact_quote": true
+    },
+    {
+      "task_id": "REL-242",
+      "comment_id": "REL-C3",
+      "exists": true,
+      "exact_quote": true
+    }
+  ],
+  "all_citations_exact": false,
+  "comment_count": 11,
+  "task_count": 4,
+  "issues_count": 5,
+  "normal_tasks": [
+    {
+      "task_id": "DOC-244",
+      "reason": "Критерий закрытия выполнен: QA подтвердила выполнение всех шагов на staging и восстановление предыдущей сборки pay-2026.11.02.1 с прохождением контрольных проверок; противоречий между статусом Done, описанием и комментариями нет."
+    }
+  ],
+  "calls": 2,
+  "counters": {
+    "hooks": 2,
+    "tools": 1
+  },
+  "restore_details": {
+    "current_response_spans": [],
+    "unknown": [],
+    "withheld": [
+      "[ACCESS_TOKEN_1_a5514486]"
+    ]
+  },
+  "ground_truth_in_prompt": false,
+  "real_crewai": true
+}

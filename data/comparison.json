@@ -1,0 +1,311 @@
+{
+  "synthetic": true,
+  "cases": [
+    {
+      "id": "case-01",
+      "title": "Имя и почта",
+      "language": "ru",
+      "text": "Клиент Марина Соколова просит ответить на marina.sokolova@example.com.",
+      "gold": [
+        {
+          "start": 7,
+          "end": 22,
+          "text": "Марина Соколова",
+          "entity_type": "PERSON"
+        },
+        {
+          "start": 42,
+          "end": 69,
+          "text": "marina.sokolova@example.com",
+          "entity_type": "EMAIL_ADDRESS"
+        }
+      ]
+    },
+    {
+      "id": "case-02",
+      "title": "Имя в падеже",
+      "language": "ru",
+      "text": "Передайте договор Андрею Кузнецову после согласования.",
+      "gold": [
+        {
+          "start": 18,
+          "end": 34,
+          "text": "Андрею Кузнецову",
+          "entity_type": "PERSON"
+        }
+      ]
+    },
+    {
+      "id": "case-03",
+      "title": "Двойная фамилия",
+      "language": "ru",
+      "text": "Заявку оформила Елена Орлова-Соколова.",
+      "gold": [
+        {
+          "start": 16,
+          "end": 37,
+          "text": "Елена Орлова-Соколова",
+          "entity_type": "PERSON"
+        }
+      ]
+    },
+    {
+      "id": "case-04",
+      "title": "Два участника",
+      "language": "ru",
+      "text": "Олег Миронов передал обращение Татьяне Волковой.",
+      "gold": [
+        {
+          "start": 0,
+          "end": 12,
+          "text": "Олег Миронов",
+          "entity_type": "PERSON"
+        },
+        {
+          "start": 31,
+          "end": 47,
+          "text": "Татьяне Волковой",
+          "entity_type": "PERSON"
+        }
+      ]
+    },
+    {
+      "id": "case-05",
+      "title": "Почта с alias",
+      "language": "ru",
+      "text": "Ответ отправьте на qa.person+case17@example.org и copy.person@example.net.",
+      "gold": [
+        {
+          "start": 19,
+          "end": 47,
+          "text": "qa.person+case17@example.org",
+          "entity_type": "EMAIL_ADDRESS"
+        },
+        {
+          "start": 50,
+          "end": 73,
+          "text": "copy.person@example.net",
+          "entity_type": "EMAIL_ADDRESS"
+        }
+      ]
+    },
+    {
+      "id": "case-06",
+      "title": "Телефон с форматированием",
+      "language": "ru",
+      "text": "Телефон клиента: +7 (916) 555-01-42.",
+      "gold": [
+        {
+          "start": 17,
+          "end": 35,
+          "text": "+7 (916) 555-01-42",
+          "entity_type": "PHONE_NUMBER"
+        }
+      ]
+    },
+    {
+      "id": "case-07",
+      "title": "Телефон в нескольких строках",
+      "language": "ru",
+      "text": "Контакт для связи:\n+7 921 555 03 18\nПозвонить после согласования.",
+      "gold": [
+        {
+          "start": 19,
+          "end": 35,
+          "text": "+7 921 555 03 18",
+          "entity_type": "PHONE_NUMBER"
+        }
+      ]
+    },
+    {
+      "id": "case-08",
+      "title": "Полный адрес",
+      "language": "ru",
+      "text": "Адрес доставки: г. Тверь, ул. Лесная, д. 14, кв. 23.",
+      "gold": [
+        {
+          "start": 16,
+          "end": 51,
+          "text": "г. Тверь, ул. Лесная, д. 14, кв. 23",
+          "entity_type": "LOCATION"
+        }
+      ]
+    },
+    {
+      "id": "case-09",
+      "title": "Адрес без индекса",
+      "language": "ru",
+      "text": "Клиент живет по адресу: Казань, улица Полевая, дом 8, квартира 17.",
+      "gold": [
+        {
+          "start": 24,
+          "end": 65,
+          "text": "Казань, улица Полевая, дом 8, квартира 17",
+          "entity_type": "LOCATION"
+        }
+      ]
+    },
+    {
+      "id": "case-10",
+      "title": "Дата рождения",
+      "language": "ru",
+      "text": "В анкете указана дата рождения: 17.08.1986.",
+      "gold": [
+        {
+          "start": 32,
+          "end": 42,
+          "text": "17.08.1986",
+          "entity_type": "DATE_TIME"
+        }
+      ]
+    },
+    {
+      "id": "case-11",
+      "title": "Паспорт",
+      "language": "ru",
+      "text": "Паспорт клиента: серия 4512, номер 654321.",
+      "gold": [
+        {
+          "start": 23,
+          "end": 27,
+          "text": "4512",
+          "entity_type": "RU_PII"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "text": "654321",
+          "entity_type": "RU_PII"
+        }
+      ]
+    },
+    {
+      "id": "case-12",
+      "title": "СНИЛС",
+      "language": "ru",
+      "text": "СНИЛС в учебной анкете: 112-233-445 95.",
+      "gold": [
+        {
+          "start": 24,
+          "end": 38,
+          "text": "112-233-445 95",
+          "entity_type": "RU_PII"
+        }
+      ]
+    },
+    {
+      "id": "case-13",
+      "title": "Логин и IP",
+      "language": "ru",
+      "text": "Логин клиента @demo_customer_714. IP сессии 192.0.2.48.",
+      "gold": [
+        {
+          "start": 14,
+          "end": 32,
+          "text": "@demo_customer_714",
+          "entity_type": "RU_PII"
+        },
+        {
+          "start": 44,
+          "end": 54,
+          "text": "192.0.2.48",
+          "entity_type": "IP_ADDRESS"
+        }
+      ]
+    },
+    {
+      "id": "case-14",
+      "title": "Повтор имени",
+      "language": "ru",
+      "text": "Марина Соколова оставила почту marina.sokolova@example.com. Позже Марина Соколова подтвердила адрес.",
+      "gold": [
+        {
+          "start": 0,
+          "end": 15,
+          "text": "Марина Соколова",
+          "entity_type": "PERSON"
+        },
+        {
+          "start": 31,
+          "end": 58,
+          "text": "marina.sokolova@example.com",
+          "entity_type": "EMAIL_ADDRESS"
+        },
+        {
+          "start": 66,
+          "end": 81,
+          "text": "Марина Соколова",
+          "entity_type": "PERSON"
+        }
+      ]
+    },
+    {
+      "id": "case-15",
+      "title": "Имя с отчеством",
+      "language": "ru",
+      "text": "Контактное лицо: Виктор Сергеевич Лебедев, телефон +7 903 555 07 24.",
+      "gold": [
+        {
+          "start": 17,
+          "end": 41,
+          "text": "Виктор Сергеевич Лебедев",
+          "entity_type": "PERSON"
+        },
+        {
+          "start": 51,
+          "end": 67,
+          "text": "+7 903 555 07 24",
+          "entity_type": "PHONE_NUMBER"
+        }
+      ]
+    },
+    {
+      "id": "case-16",
+      "title": "Смешанный текст",
+      "language": "ru",
+      "text": "Customer Anna Petrova просит ответить на anna.petrova@example.com.",
+      "gold": [
+        {
+          "start": 9,
+          "end": 21,
+          "text": "Anna Petrova",
+          "entity_type": "PERSON"
+        },
+        {
+          "start": 41,
+          "end": 65,
+          "text": "anna.petrova@example.com",
+          "entity_type": "EMAIL_ADDRESS"
+        }
+      ]
+    },
+    {
+      "id": "case-17",
+      "title": "Без PII: задача",
+      "language": "ru",
+      "text": "Задача PAY-315 закрыта после проверки. Нужен повторный запуск тестов.",
+      "gold": []
+    },
+    {
+      "id": "case-18",
+      "title": "Без PII: суммы",
+      "language": "ru",
+      "text": "В заказе 20 кресел, бюджет 300000 рублей. Уточните срок поставки.",
+      "gold": []
+    },
+    {
+      "id": "case-19",
+      "title": "Без PII: версия",
+      "language": "ru",
+      "text": "Сборка build-20261106.4 прошла тесты, HTTP 200. Ошибок в журнале нет.",
+      "gold": []
+    },
+    {
+      "id": "case-20",
+      "title": "Без PII: обычный текст",
+      "language": "ru",
+      "text": "Нужно обновить документацию и проверить инструкцию отката сервиса.",
+      "gold": []
+    }
+  ]
+}

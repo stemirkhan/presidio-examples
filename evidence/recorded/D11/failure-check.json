@@ -1,0 +1,4 @@
+{
+  "filter_failure_blocked": true,
+  "gateway_calls_during_failure": 0
+}

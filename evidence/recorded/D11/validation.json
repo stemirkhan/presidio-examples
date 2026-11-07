@@ -1,0 +1,30 @@
+{
+  "real_litellm_proxy": true,
+  "real_presidio_services": true,
+  "provider_calls": 2,
+  "known_originals_checked_at_egress": [
+    "Марина Соколова",
+    "marina.sokolova@example.com"
+  ],
+  "failure_check": {
+    "filter_failure_blocked": true,
+    "gateway_calls_during_failure": 0
+  },
+  "streaming_tested": false,
+  "output_scan_enabled": false,
+  "results": {
+    "presidio-mask": {
+      "provider_answer": "Ответьте <PERSON> (<EMAIL_ADDRESS>).",
+      "client_answer": "Ответьте <PERSON> (<EMAIL_ADDRESS>).",
+      "originals_in_client_answer": []
+    },
+    "presidio-restore": {
+      "provider_answer": "Ответить нужно клиенту <PERSON_1> на почту <EMAIL_ADDRESS_2>.",
+      "client_answer": "Ответить нужно клиенту Марина Соколова на почту marina.sokolova@example.com.",
+      "originals_in_client_answer": [
+        "Марина Соколова",
+        "marina.sokolova@example.com"
+      ]
+    }
+  }
+}

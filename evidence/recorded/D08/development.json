@@ -1,0 +1,63 @@
+{
+  "input": "mobile-bank auth_audit\nlogin=@mzhixjkz182 ip=192.0.2.39 result=success\nВ обращении клиента оказался фрагмент сессии: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtemhpeGprejE4MiIsImV4YW1wbGUiOnRydWV9.O97nOoyEN5FdeuuO4Cm5lUuTQ2Cyk5eqZRvZ. Сессия завершена оператором после проверки; этот фрагмент нужно убрать перед передачей журнала внешней поддержке.",
+  "before": [
+    {
+      "entity_type": "RU_PII",
+      "start": 29,
+      "end": 41,
+      "score": 0.9996285438537598,
+      "text": "@mzhixjkz182",
+      "recognizer": "metrika_GLiNER25"
+    },
+    {
+      "entity_type": "IP_ADDRESS",
+      "start": 45,
+      "end": 55,
+      "score": 0.95,
+      "text": "192.0.2.39",
+      "recognizer": "IpRecognizer"
+    },
+    {
+      "entity_type": "RU_PII",
+      "start": 45,
+      "end": 55,
+      "score": 0.9497109651565552,
+      "text": "192.0.2.39",
+      "recognizer": "metrika_GLiNER25"
+    }
+  ],
+  "after": [
+    {
+      "entity_type": "RU_PII",
+      "start": 29,
+      "end": 41,
+      "score": 0.9996285438537598,
+      "text": "@mzhixjkz182",
+      "recognizer": "metrika_GLiNER25"
+    },
+    {
+      "entity_type": "IP_ADDRESS",
+      "start": 45,
+      "end": 55,
+      "score": 0.95,
+      "text": "192.0.2.39",
+      "recognizer": "IpRecognizer"
+    },
+    {
+      "entity_type": "RU_PII",
+      "start": 45,
+      "end": 55,
+      "score": 0.9497109651565552,
+      "text": "192.0.2.39",
+      "recognizer": "metrika_GLiNER25"
+    },
+    {
+      "entity_type": "ACCESS_TOKEN",
+      "start": 117,
+      "end": 223,
+      "score": 1.0,
+      "text": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtemhpeGprejE4MiIsImV4YW1wbGUiOnRydWV9.O97nOoyEN5FdeuuO4Cm5lUuTQ2Cyk5eqZRvZ",
+      "recognizer": "JwtSessionRecognizer"
+    }
+  ]
+}

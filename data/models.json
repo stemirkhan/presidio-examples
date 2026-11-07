@@ -1,0 +1,14 @@
+{
+  "fastino": {
+    "id": "fastino/gliner2.5-multi-v1",
+    "revision": "cf5593a5d45e3bbf204b9df621b13b1c0cf25ee3",
+    "old_alias": "fastino_25",
+    "labels": {"person":"PERSON","location":"LOCATION","date of birth":"DATE_TIME","phone number":"PHONE_NUMBER","email address":"EMAIL_ADDRESS","personal identifier":"RU_PII"}
+  },
+  "metrika": {
+    "id": "metrika-labs/ru-pii-ner-gliner2.5",
+    "revision": "7a410193d83373e61d029944aac77ae47ffb5d9a",
+    "old_alias": "metrika_25",
+    "labels": {"ru_pii_person":"PERSON","ru_pii_location":"LOCATION","ru_pii_date":"DATE_TIME","ru_pii_phone":"PHONE_NUMBER","ru_pii_email":"EMAIL_ADDRESS","ru_pii":"RU_PII"}
+  }
+}

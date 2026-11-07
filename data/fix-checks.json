@@ -1,0 +1,91 @@
+{
+  "synthetic": true,
+  "positive": [
+    {
+      "id": "jwt-00",
+      "text": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS0wIiwiZGVtbyI6dHJ1ZX0.0a89ecaf107d11782a3793970e565d96445672",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS0wIiwiZGVtbyI6dHJ1ZX0.0a89ecaf107d11782a3793970e565d96445672"
+    },
+    {
+      "id": "jwt-01",
+      "text": "cookie session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS0xIiwiZGVtbyI6dHJ1ZX0.466fd4c5b90d1bf7917ec5e5559dbf9de6f160; path=/",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS0xIiwiZGVtbyI6dHJ1ZX0.466fd4c5b90d1bf7917ec5e5559dbf9de6f160"
+    },
+    {
+      "id": "jwt-02",
+      "text": "Скопировали токен eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS0yIiwiZGVtbyI6dHJ1ZX0.3ae353a7bd30a84142cafa0d4c5e485f4cb1c1.",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS0yIiwiZGVtbyI6dHJ1ZX0.3ae353a7bd30a84142cafa0d4c5e485f4cb1c1"
+    },
+    {
+      "id": "jwt-03",
+      "text": "<session>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS0zIiwiZGVtbyI6dHJ1ZX0.06c5034f9b42e3d83e85071ff3f97c1ea833d0</session>",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS0zIiwiZGVtbyI6dHJ1ZX0.06c5034f9b42e3d83e85071ff3f97c1ea833d0"
+    },
+    {
+      "id": "jwt-04",
+      "text": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS00IiwiZGVtbyI6dHJ1ZX0.d0d82d8bff33ce4f729947cbac9094c6dc5a17\"}",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS00IiwiZGVtbyI6dHJ1ZX0.d0d82d8bff33ce4f729947cbac9094c6dc5a17"
+    },
+    {
+      "id": "jwt-05",
+      "text": "Сессия (eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS01IiwiZGVtbyI6dHJ1ZX0.6f74b6cc7c91b97825755643e80c62a0b528f0) окончена.",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS01IiwiZGVtbyI6dHJ1ZX0.6f74b6cc7c91b97825755643e80c62a0b528f0"
+    },
+    {
+      "id": "jwt-06",
+      "text": "url?session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS02IiwiZGVtbyI6dHJ1ZX0.ce481c2dff53638d0abf323592d83b9a519671&debug=1",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS02IiwiZGVtbyI6dHJ1ZX0.ce481c2dff53638d0abf323592d83b9a519671"
+    },
+    {
+      "id": "jwt-07",
+      "text": "Удалите eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS03IiwiZGVtbyI6dHJ1ZX0.24f35c9c23efb31c0e1d59df812fa65f107155 из лога.",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS03IiwiZGVtbyI6dHJ1ZX0.24f35c9c23efb31c0e1d59df812fa65f107155"
+    },
+    {
+      "id": "jwt-08",
+      "text": "Ключ временного доступа: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS04IiwiZGVtbyI6dHJ1ZX0.73b006b19ef231600a59f9c5891b0df22fa0c6",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS04IiwiZGVtbyI6dHJ1ZX0.73b006b19ef231600a59f9c5891b0df22fa0c6"
+    },
+    {
+      "id": "jwt-09",
+      "text": "Данные сессии:\neyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS05IiwiZGVtbyI6dHJ1ZX0.0b4e62a74643c0da22601a927130bf4ecdc2c0\nКонец строки.",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS05IiwiZGVtbyI6dHJ1ZX0.0b4e62a74643c0da22601a927130bf4ecdc2c0"
+    },
+    {
+      "id": "jwt-10",
+      "text": "token=\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS0xMCIsImRlbW8iOnRydWV9.0c6cb86480922ddf25b224fdd941d6e8f19b20\"",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS0xMCIsImRlbW8iOnRydWV9.0c6cb86480922ddf25b224fdd941d6e8f19b20"
+    },
+    {
+      "id": "jwt-11",
+      "text": "Поддержка прислала: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS0xMSIsImRlbW8iOnRydWV9.5fcf11b442644bbdc6c57d52b7108da4d54614; проверка завершена.",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzeW50aGV0aWMtYWNjZXB0YW5jZS0xMSIsImRlbW8iOnRydWV9.5fcf11b442644bbdc6c57d52b7108da4d54614"
+    }
+  ],
+  "negative": [
+    {
+      "id": "negative-00",
+      "text": "Версия backend.release.candidate не содержит секрета."
+    },
+    {
+      "id": "negative-01",
+      "text": "host=service.internal.example"
+    },
+    {
+      "id": "negative-02",
+      "text": "Задача OPS-452 ожидает проверки."
+    },
+    {
+      "id": "negative-03",
+      "text": "Проверка завершена успешно."
+    },
+    {
+      "id": "negative-04",
+      "text": "Файл bundle.runtime.js доступен локально."
+    },
+    {
+      "id": "negative-05",
+      "text": "eyJkZW1vIjp0cnVlfQ.eyJ2YWx1ZSI6InNhbXBsZSJ9.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+  ]
+}

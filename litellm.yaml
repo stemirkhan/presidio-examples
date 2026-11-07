@@ -1,0 +1,43 @@
+model_list:
+  - model_name: demo-deepseek
+    litellm_params:
+      model: openai/deepseek-flash
+      api_base: os.environ/DEMO_GATEWAY_BASE
+      api_key: local-diagnostic-gateway
+      max_tokens: 2048
+      temperature: 0
+
+guardrails:
+  - guardrail_name: presidio-mask
+    litellm_params:
+      guardrail: presidio
+      mode: pre_call
+      default_on: false
+      presidio_language: ru
+      presidio_filter_scope: input
+      output_parse_pii: false
+      pii_entities_config:
+        PERSON: MASK
+        EMAIL_ADDRESS: MASK
+      presidio_score_thresholds:
+        ALL: 0.5
+  - guardrail_name: presidio-restore
+    litellm_params:
+      guardrail: presidio
+      mode: pre_call
+      default_on: false
+      presidio_language: ru
+      presidio_filter_scope: input
+      output_parse_pii: true
+      pii_entities_config:
+        PERSON: MASK
+        EMAIL_ADDRESS: MASK
+      presidio_score_thresholds:
+        ALL: 0.5
+
+litellm_settings:
+  num_retries: 0
+  request_timeout: 150
+  telemetry: false
+general_settings:
+  disable_spend_logs: true

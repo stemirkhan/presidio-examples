@@ -1,0 +1,29 @@
+{
+  "baseline": {
+    "cases": 20,
+    "fully_covered": 18,
+    "gold_mentions": 25,
+    "negative_cases": 4,
+    "negative_with_findings": 0,
+    "extra_characters": 5,
+    "timing_note": "One observation per case, after one separate warmup; not a latency benchmark"
+  },
+  "fastino": {
+    "cases": 20,
+    "fully_covered": 19,
+    "gold_mentions": 25,
+    "negative_cases": 4,
+    "negative_with_findings": 0,
+    "extra_characters": 0,
+    "timing_note": "One observation per case, after one separate warmup; not a latency benchmark"
+  },
+  "metrika": {
+    "cases": 20,
+    "fully_covered": 25,
+    "gold_mentions": 25,
+    "negative_cases": 4,
+    "negative_with_findings": 0,
+    "extra_characters": 0,
+    "timing_note": "One observation per case, after one separate warmup; not a latency benchmark"
+  }
+}
